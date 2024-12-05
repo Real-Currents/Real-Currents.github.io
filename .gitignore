@@ -35,14 +35,13 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+.R*
 /.quarto/
-/_site/
-/public/
-*.bak
-*.html
-*.idea
-
-.Rhistory
-.Rprofile
+*_cache/
+*_site/
+data/
 renv/
 venv/
+*.bak
+*.idea
+*.html
