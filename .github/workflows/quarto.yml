@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - main
-      - 'dev/**'
 
 jobs:
   build-deploy:
@@ -29,7 +28,9 @@ jobs:
         with:
           cache-version: 2
           packages: |
+            any::quarto
             any::renv
+            any::rmarkdown
 
 #      - name: Install R dependencies with renv
 #        uses: r-lib/actions/setup-renv@v2
