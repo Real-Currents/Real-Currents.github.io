@@ -59,7 +59,7 @@ that is intended) and allows some other code block to call:
 
 <br />
 
-Then that same data can be used specify dimensions of the individual
+Then that same data can be used TO specify dimensions of the individual
 blocks in
 [`@sveltejs/gl`](https://github.com/Real-Currents/SvelteGL/tree/real/currents).
 Here’s the full source of the app.

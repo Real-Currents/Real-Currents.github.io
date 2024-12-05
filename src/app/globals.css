@@ -116,8 +116,12 @@ main {
   }
 }
 
-.main > * p {
+main>* p {
   line-height: 1.5em;
+}
+
+main * ul, main * ul {
+  padding-left: 5%;
 }
 
 div#content {
@@ -301,10 +305,11 @@ div#content * .r-data pre {
 }
 
 div#content * img {
-  float:right;
-  width:320px;
-  margin-top:-2px;
-  margin-bottom:-1px;
+  float: right;
+  width: 376px;
+  margin-top: -2px;
+  margin-bottom: -1px;
+  margin-right: -66px;
 }
 
 div#content * .python+p img, div#content * .r+p img, div#content * .r-mapping * img {
