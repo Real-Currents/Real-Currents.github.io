@@ -3,7 +3,7 @@
   "description": "A showcase of experiments in Information Experience Design (IxD)",
   "version": "1.0.0",
   "author": "John Hall",
-  "license": "MIT",
+  "license": "CC-BY-3.0",
   "main": "index.js",
   "private": true,
   "repository": "Real-Currents/www",

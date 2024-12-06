@@ -33,4 +33,4 @@ In terms of information and insight (wisdom):
 Our interests lean toward producing and promoting methods for tracing
 the potential path (locus) of these phenomena, from where they begin to
 where they may lead, with an emphasis on interpretability, reasonability
-and usability.
+and usability.[\*](#contact-details)
