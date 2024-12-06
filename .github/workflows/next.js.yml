@@ -85,12 +85,12 @@ jobs:
         run: ls -lA ./out/
 
       - name: Upload static files as artifact
-        id: deployment
+        id: deploy
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
           path: out/
 
       - name: Publish to GitHub Pages
-        id: deployment
+        id: publish
         uses: actions/deploy-pages@v4
 
