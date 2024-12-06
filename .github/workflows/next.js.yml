@@ -78,13 +78,13 @@ jobs:
         run: npm run build
 
       - name: List build outputs
-        run: ls -lA ./out/*
+        run: ls -lA out/*
 
       - name: Upload static files as artifact
         id: deploy
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
-          path: ./out/*
+          path: out/**
 
       - name: Publish to GitHub Pages
         id: publish
