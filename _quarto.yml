@@ -20,9 +20,8 @@ website:
 format:
   html:
     theme:
-      - cosmo
+      - darkly
       - src/custom.scss
-    css: src/styles.css
+    css: src/app/globals.css
     toc: true
-
 
