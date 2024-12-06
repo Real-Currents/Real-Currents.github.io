@@ -305,10 +305,11 @@ div#content * .r-data pre {
 }
 
 div#content * img {
-  float:right;
-  width:320px;
-  margin-top:-2px;
-  margin-bottom:-1px;
+  float: right;
+  width: 376px;
+  margin-top: -2px;
+  margin-bottom: -1px;
+  margin-right: -66px;
 }
 
 div#content * .python+p img, div#content * .r+p img, div#content * .r-mapping * img {
@@ -333,6 +334,46 @@ div#control #toggle_control {
   min-width:256px;
   max-width:256px;
   background-image:url(images/txt_bubble.png);
+}
+
+div.container.fullscreen {
+  display: block;
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+div.controls {
+  position: absolute;
+  margin: -50% 8px 8px 0;
+  margin-top: -50%;
+  color: #282c34;
+  width: 300px;
+  padding: 1em;
+  text-align: center;
+  background-color: hsla(0,0%,100%,.7);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+div.controls.right {
+  float: right;
+  left: 50vw;
+  top: 0;
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 1440px) {
+  .controls.right {
+    left: 54vw;
+  }
+}
+
+div.controls *, div.controls.right * {
+  display: block;
 }
 
 span#mode {
@@ -474,4 +515,8 @@ div#title h1 {
   bottom:0;
   right:0;
   font-size:10pt;
+}
+
+* #contact-details {
+  padding: 100px;
 }

@@ -7,6 +7,7 @@ import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
 import { metadata } from "@/app/layout";
 import StaticRewriteComponent from "@/components/StaticRewriteComponent";
+import SvelteMainComponent from "@/components/SvelteMainComponent";
 import { Post } from "@/types";
 import { cleanMarkdownToJSContent, getPostMetadata } from "@/utils";
 
@@ -46,6 +47,7 @@ export default function ContentPage ({ params }: ContentParams) {
                 <Markdown>{cleanMarkdownToJSContent(postMatter.content)}</Markdown>
             </article>
             <StaticRewriteComponent uri={`/content/posts/${slug}.html`} />
+            <SvelteMainComponent />
         </main>
     );
 }

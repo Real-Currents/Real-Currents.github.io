@@ -39,7 +39,7 @@ next-env.d.ts
 /.quarto/
 *_cache/
 *_site/
-data/
+/content/*/data
 renv/
 venv/
 *.bak

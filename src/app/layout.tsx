@@ -1,14 +1,27 @@
+import * as React from "react";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Comfortaa, Inter, Bitter, Montserrat, Roboto } from "next/font/google";
+import { getIntroContent } from "@/utils";
+
 import "./fonts.css";
 import "./globals.css";
-import fs from "fs";
-import matter from "gray-matter";
-import type { Metadata } from "next";
-import { Comfortaa, Inter, Bitter, Montserrat, Roboto } from "next/font/google";
-import Link from "next/link";
-import { HeaderLayoutProps } from "@/types";
-import { metadata } from "@/utils";
+import StaticRewriteComponent from "@/components/StaticRewriteComponent";
 
 const comfortaa = Comfortaa({ subsets: ["latin"] });
+
+interface HeaderLayoutProps extends Metadata {
+    title: string,
+    description?: string,
+    subtitles?: string[]
+}
+
+// TODO: Populate metadata from index.md front matter
+export const metadata: HeaderLayoutProps = {
+    ...getIntroContent().data,
+  title: "Real~Currents",
+  description: "Experiments in Information Experience Design (IxD)",
+};
 
 // TODO: Use metadata props to build header
 function HeaderLayout ({ title, description, subtitles }: HeaderLayoutProps) {
@@ -16,7 +29,7 @@ function HeaderLayout ({ title, description, subtitles }: HeaderLayoutProps) {
       <header>
           <div id={"trademark"}>
               {(!!subtitles && subtitles.length > 0) ?
-                  subtitles.map((s, i) => (<><span key={`sub-${i}`}>{s}</span><br /></>)) :
+                  subtitles.map((s, i) => (<span key={`sub-${i}`}>{s}<br/></span>)) :
                   <br />
               }
           </div>
@@ -34,6 +47,8 @@ function HeaderLayout ({ title, description, subtitles }: HeaderLayoutProps) {
                   }
               </h1></Link>
           </div>
+
+          <div></div>
       </header>
   );
 }
@@ -43,8 +58,8 @@ function FooterLayout () {
       <footer>
           <p id="copyright"></p>
           <p id="built_with">
-              ...built with <a href="https://nextjs.org/docs" target="_blank">Next.js</a> 
-              & <a href="https://quarto.org/docs/get-started/" target="_blank">Quarto</a>
+              ...built with <a href="https://nextjs.org/docs" target="_blank">Next.js</a>&nbsp;
+              &&nbsp;<a href="https://quarto.org/docs/get-started/" target="_blank">Quarto</a>
           </p>
       </footer>
   );
@@ -55,32 +70,39 @@ export default function RootLayout ({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-    // console.log(metadata);
 
-  return (
-    <html lang="en">
-      <body className={comfortaa.className}>
+    console.log(metadata);
 
-      <div id={"background_container"}>
-          <div id={"background_app"} role={"main"} style={{minWidth: "100vw"}}>
-          </div>
+    return (
+        <html lang="en">
+        <body className={comfortaa.className}>
 
-          <FooterLayout></FooterLayout>
-      </div>
-      
-      <div id={"transparent_background"}></div>
-      
-      <div id={"home_screen"}>
-          <HeaderLayout title={metadata["title"]!}
-                        subtitles={metadata["subtitles"]!}
-                        description={metadata["description"]!}></HeaderLayout>
+        <div id={"background_container"}>
+            <div id={"background_app"} role={"main"} style={{minWidth: "100vw"}}>
+            </div>
 
-          <div id={"content"}>
-              {children}
-          </div>
+            <FooterLayout></FooterLayout>
+        </div>
 
-      </div>
-      </body>
-    </html>
-  );
+        <div id={"transparent_background"}></div>
+
+        <div id={"home_screen"}>
+            <HeaderLayout title={metadata["title"]!}
+                          subtitles={metadata["subtitles"]!}
+                          description={metadata["description"]!}></HeaderLayout>
+
+            <div id={"content"}>
+                {/*<main id="svelte-app" role="main svelte-app"></main>*/}
+                {children}
+            </div>
+
+            <p id={"contact-details"}>
+                <span>*</span> <em>Please contact John for details and demos: <a href="mailto:john@real-currents.com">john@real-currents.com</a></em>
+            </p>
+
+        </div>
+
+        </body>
+        </html>
+    );
 }

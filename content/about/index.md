@@ -1,4 +1,9 @@
-# About
+---
+author: John Hall
+format:
+  gfm:
+    variant: +yaml_metadata_block
+---
 
 
 About this site

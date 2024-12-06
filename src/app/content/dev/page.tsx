@@ -48,7 +48,7 @@ export default function ContentPage ({ params }: ContentParams) {
                 {(!!postMatter.data.title && <h1>{postMatter.data.title}</h1>)}
                 <Markdown>{cleanMarkdownToJSContent(postMatter.content)}</Markdown>
             </article>
-            {/*<StaticRewriteComponent uri={`/content/dev.html`} />*/}
+            <StaticRewriteComponent uri={`/content/dev.html`} />
         </main>
     );
 }

@@ -41,10 +41,10 @@ jobs:
             any::renv
             any::rmarkdown
 
-#      - name: Install R dependencies with renv
-#        uses: r-lib/actions/setup-renv@v2
-#        with:
-#          cache-version: 1
+      #      - name: Install R dependencies with renv
+      #        uses: r-lib/actions/setup-renv@v2
+      #        with:
+      #          cache-version: 1
 
       - name: Print GITHUB_TOKEN
         run: echo ${{ secrets.GITHUB_TOKEN }}
@@ -52,16 +52,16 @@ jobs:
       - name: Print GITHUB_WORKSPACE
         run: echo ${GITHUB_WORKSPACE}
 
-#      - name: Render and Publish
-#        uses: quarto-dev/quarto-actions/publish@v2
-#        with:
-#          target: gh-pages
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #      - name: Render and Publish
+      #        uses: quarto-dev/quarto-actions/publish@v2
+      #        with:
+      #          target: gh-pages
+      #        env:
+      #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-#      - name: List outputs after quarto render
-#        run: |
-#          ls -l "${GITHUB_WORKSPACE}"
+      #      - name: List outputs after quarto render
+      #        run: |
+      #          ls -l "${GITHUB_WORKSPACE}"
 
       - name: Setup Node.js
         uses: ./.github/workflows/node.js
@@ -73,8 +73,8 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-#        with:
-#          static_site_generator: next
+      #        with:
+      #          static_site_generator: next
 
       - name: Build with Next.js
         run: npm run build:next
