@@ -516,3 +516,7 @@ div#title h1 {
   right:0;
   font-size:10pt;
 }
+
+* #contact-details {
+  padding: 100px;
+}

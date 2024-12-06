@@ -96,6 +96,10 @@ export default function RootLayout ({
                 {children}
             </div>
 
+            <p id={"contact-details"}>
+                <span id="details">*</span> <em>Please contact John for details and demos: <a href="mailto:john@real-currents.com">john@real-currents.com</a></em>
+            </p>
+
         </div>
 
         </body>
