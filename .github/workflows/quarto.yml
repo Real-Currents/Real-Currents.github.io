@@ -1,4 +1,4 @@
-name: Quarto Publish
+name: Quarto Render
 
 on:
   workflow_dispatch:

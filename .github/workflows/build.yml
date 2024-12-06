@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - 'dev/**'
       - main
+      - 'dev/**'
 
 permissions:
   contents: read
