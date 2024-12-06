@@ -17,7 +17,7 @@ format:
 
 
 <div id="vizr-app" role="main"
-style="width: 100%; min-width: 800px; margin-left: -86px;">
+style="width: 100%; min-width: 800px; margin-left: -100px;">
 
  
 

@@ -1,6 +1,36 @@
 import fs from "fs";
 import matter from "gray-matter";
-import { Post } from "@/types";
+import { HeaderLayoutProps, Post } from "@/types";
+
+import Debugger from "./debugger.js";
+
+export function getContent (contents: string) {
+    const matterResult = matter(contents);
+
+    Debugger.on = true;
+    Debugger.log("Hello, Debugger");
+
+    // for (const p in matterResult) {
+    //     if (matterResult.hasOwnProperty(p)) {
+    //         console.log("property in matter: ", p);
+    //     }
+    // }
+
+    if (matterResult.hasOwnProperty("content")) {
+        matterResult.content = matterResult.content
+            .toString().replace(/class\=/, "className=");
+    }
+
+    return matterResult;
+}
+
+const introFileContent = fs.readFileSync(`./content/index.md`, "utf8");
+
+export const metadata: HeaderLayoutProps = {
+    ...getContent(introFileContent).data,
+    title: "Real~Currents",
+    description: "Experiments in Information Experience Design (IxD)",
+};
 
 export function getIntroContent() {
     const file = `./content/index.md`;
@@ -18,8 +48,14 @@ export function getPostMetadata (basePath: string): Post[] {
     return markdownPosts.map((filename) => {
         const fileContents = fs.readFileSync(`${basePath}/${filename}`, "utf8");
         const matterResult = matter(fileContents);
+
+        if (matterResult.hasOwnProperty("content")) {
+            matterResult.content = matterResult.content
+                .toString().replace(/class\=/, "className=");
+        }
+
         return {
-            ...matterResult.data,
+            ...getContent(fileContents).data,
             slug: filename.replace('.md', '')
         } as Post;
     });

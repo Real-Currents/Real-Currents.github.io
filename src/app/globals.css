@@ -336,6 +336,46 @@ div#control #toggle_control {
   background-image:url(images/txt_bubble.png);
 }
 
+div.container.fullscreen {
+  display: block;
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+div.controls {
+  position: absolute;
+  margin: -50% 8px 8px 0;
+  margin-top: -50%;
+  color: #282c34;
+  width: 300px;
+  padding: 1em;
+  text-align: center;
+  background-color: hsla(0,0%,100%,.7);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+div.controls.right {
+  float: right;
+  left: 50vw;
+  top: 0;
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 1440px) {
+  .controls.right {
+    left: 54vw;
+  }
+}
+
+div.controls *, div.controls.right * {
+  display: block;
+}
+
 span#mode {
   font-variant:small-caps;
 }

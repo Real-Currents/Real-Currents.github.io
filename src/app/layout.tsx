@@ -6,6 +6,7 @@ import { getIntroContent } from "@/utils";
 
 import "./fonts.css";
 import "./globals.css";
+import StaticRewriteComponent from "@/components/StaticRewriteComponent";
 
 const comfortaa = Comfortaa({ subsets: ["latin"] });
 
@@ -46,6 +47,8 @@ function HeaderLayout ({ title, description, subtitles }: HeaderLayoutProps) {
                   }
               </h1></Link>
           </div>
+
+          <div></div>
       </header>
   );
 }
@@ -67,32 +70,35 @@ export default function RootLayout ({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
     console.log(metadata);
 
-  return (
-    <html lang="en">
-      <body className={comfortaa.className}>
+    return (
+        <html lang="en">
+        <body className={comfortaa.className}>
 
-      <div id={"background_container"}>
-          <div id={"background_app"} role={"main"} style={{minWidth: "100vw"}}>
-          </div>
+        <div id={"background_container"}>
+            <div id={"background_app"} role={"main"} style={{minWidth: "100vw"}}>
+            </div>
 
-          <FooterLayout></FooterLayout>
-      </div>
-      
-      <div id={"transparent_background"}></div>
-      
-      <div id={"home_screen"}>
-          <HeaderLayout title={metadata["title"]!}
-                        subtitles={metadata["subtitles"]!}
-                        description={metadata["description"]!}></HeaderLayout>
+            <FooterLayout></FooterLayout>
+        </div>
 
-          <div id={"content"}>
-              {children}
-          </div>
+        <div id={"transparent_background"}></div>
 
-      </div>
-      </body>
-    </html>
-  );
+        <div id={"home_screen"}>
+            <HeaderLayout title={metadata["title"]!}
+                          subtitles={metadata["subtitles"]!}
+                          description={metadata["description"]!}></HeaderLayout>
+
+            <div id={"content"}>
+                {/*<main id="svelte-app" role="main svelte-app"></main>*/}
+                {children}
+            </div>
+
+        </div>
+
+        </body>
+        </html>
+    );
 }

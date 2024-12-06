@@ -15,7 +15,7 @@ format:
     variant: +yaml_metadata_block
 ---
 
-<div id="vizr-app" role="main" style="width: 100%; min-width: 800px; margin-left: -86px;">
+<div id="vizr-app" role="main" style="width: 100%; min-width: 800px; margin-left: -100px;">
 &nbsp;
 </div>
 
@@ -81,7 +81,7 @@ Note the `type="application/json"` attribute, which prevents the browser from ev
 
 <br />
 
-Then that same data can be used TO specify dimensions of the individual blocks in [`@sveltejs/gl`](https://github.com/Real-Currents/SvelteGL/tree/real/currents). Here's the full source of the app.
+Then that same data can be used to specify dimensions of the individual blocks in [`@sveltejs/gl`](https://github.com/Real-Currents/SvelteGL/tree/real/currents). Here's the full source of the app.
 
 `VizRApp.svelte`:
 
