@@ -33,13 +33,13 @@ jobs:
           r-version: '4.3.1'
 
       - name: Install R package dependencies
-         uses: r-lib/actions/setup-r-dependencies@v2
-         with:
-           cache-version: 2
-           packages: |
-              any::quarto
-              any::renv
-              any::rmarkdown
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 2
+          packages: |
+            any::quarto
+            any::renv
+            any::rmarkdown
 
 #      - name: Install R dependencies with renv
 #        uses: r-lib/actions/setup-renv@v2
