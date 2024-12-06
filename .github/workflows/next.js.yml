@@ -28,7 +28,7 @@ jobs:
 
       - name: List submodules before build
         run: |
-          ls -lA "${GITHUB_WORKSPACE}/content/*"
+          ls -lA "${GITHUB_WORKSPACE}/../content/*"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -87,7 +87,7 @@ jobs:
 
       - name: List outputs after next build
         run: |
-          ls -lA "${GITHUB_WORKSPACE}"
+          ls -lA "${GITHUB_WORKSPACE}/../"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
