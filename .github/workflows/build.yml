@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - 'dev/**'
+      - main
 
 permissions:
   contents: read
@@ -16,7 +17,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -67,11 +68,6 @@ jobs:
 
       - name: Setup Node.js
         uses: ./.github/workflows/node.js
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      #        with:
-      #          static_site_generator: next
 
       - name: Build with Next.js
         run: npm run build
