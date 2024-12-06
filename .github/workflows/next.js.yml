@@ -24,6 +24,7 @@ jobs:
       contents: write
       # https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-cloud-providers#updating-your-github-actions-workflow
       id-token: write # This is required for requesting the JWT
+      pages: write
       pull-requests: write
       repository-projects: write
     runs-on: ubuntu-latest
