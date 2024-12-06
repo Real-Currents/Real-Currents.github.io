@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - 'dev/**'
+      - main
+      - real/currents
 
 permissions:
   contents: read
