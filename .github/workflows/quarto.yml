@@ -15,9 +15,21 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
+      - name: Print GITHUB_TOKEN
+        run: echo ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print GITHUB_WORKSPACE
+        run: echo ${GITHUB_WORKSPACE}
+
+      - name: Print working directory
+        run: echo $(pwd)
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
       # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
@@ -29,18 +41,20 @@ jobs:
         with:
           cache-version: 2
           packages: |
+            any::quarto
             any::renv
+            any::rmarkdown
 
 #      - name: Install R dependencies with renv
 #        uses: r-lib/actions/setup-renv@v2
 #        with:
 #          cache-version: 1
 
-      - name: Print GITHUB_TOKEN
-        run: echo ${{ secrets.GITHUB_TOKEN }}
+      - name: Render with Quarto
+        run: quarto render
 
-      - name: Print GITHUB_WORKSPACE
-        run: echo ${GITHUB_WORKSPACE}
+      - name: List site outputs
+        run: ls -lA _site/
 
 #      - name: Render and Publish
 #        uses: quarto-dev/quarto-actions/publish@v2
