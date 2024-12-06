@@ -26,10 +26,6 @@ jobs:
         with:
           submodules: 'true'
 
-      - name: List submodules before build
-        run: |
-          ls -lA "${GITHUB_WORKSPACE}/*"
-
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
       # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
@@ -79,7 +75,3 @@ jobs:
 
       - name: Build with Next.js
         run: npm run build
-
-      - name: List outputs after next build
-        run: |
-          ls -lA "${GITHUB_WORKSPACE}"
