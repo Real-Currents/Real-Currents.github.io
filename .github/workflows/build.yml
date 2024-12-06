@@ -23,6 +23,12 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
+      - name: List submodules before next build
+        run: |
+          ls -lA "${GITHUB_WORKSPACE}"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
