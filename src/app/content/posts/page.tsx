@@ -1,7 +1,6 @@
 import * as React from "react";
 import PostCard from "@/components/PostCard";
 import StaticRewriteComponent from "@/components/StaticRewriteComponent";
-import SvelteMainComponent from "@/components/SvelteMainComponent";
 import { Post } from "@/types";
 import { getPostMetadata } from "@/utils";
 
@@ -23,7 +22,7 @@ export default function Home() {
                 );
             })}
         </div>
-        <SvelteMainComponent uri={`/content/posts.html`} />
+        <StaticRewriteComponent uri={`/content/posts.html`} />
     </main>
   );
 }

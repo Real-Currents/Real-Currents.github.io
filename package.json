@@ -28,7 +28,7 @@
   "scripts": {
     "dev": "npm run render:markdown && next dev",
     "build": "npm run render:markdown && next build",
-    "start": "python -m http.server -d _site 3000",
+    "start": "python -m http.server -d out 3000",
     "lint": "next lint",
     "next": "next",
     "preview": "quarto preview",

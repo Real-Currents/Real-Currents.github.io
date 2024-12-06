@@ -17,6 +17,7 @@ export default function Home() {
             // { title: "Lemon Poppy Seed Muffins", slug: "lemon_poppy_seed_muffins" } // => /content/recipes/lemon_poppy_seed_muffins.html
             {
                 title: "Visualizing R Data with SveltR",
+                content: "",
                 slug: "visualize-r", // => /content/posts/visualize-r.html
                 date: new Date('2020-03-14'),
                 description: "R has some methods for turning R data into JavaScript or JSON data and printing the results within HTML tags..."
