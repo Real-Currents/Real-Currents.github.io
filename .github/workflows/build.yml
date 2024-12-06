@@ -26,9 +26,9 @@ jobs:
         with:
           submodules: 'true'
 
-      - name: List submodules before next build
+      - name: List submodules before build
         run: |
-          ls -lA "${GITHUB_WORKSPACE}"
+          ls -lA "${GITHUB_WORKSPACE}/content/*"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
