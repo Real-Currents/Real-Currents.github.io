@@ -35,21 +35,21 @@ export default function Home() {
                 <Markdown>{cleanMarkdownToJSContent(introMatter.content)}</Markdown>
             </div>
             <br />
-            <Link className={"unstyled"}
-                  href={`/content/dev`} >
-                <h2>Meet the developer!</h2>
-            </Link>
-            <br />
             <div className={"postContainer"}>
                 {postMetadata.map((post, index) => {
                     return (
                         <PostCard contentRoot={"content/posts"}
-                                    key={"post-" + index}
-                                    post={(post as Post)}>
+                                  key={"post-" + index}
+                                  post={(post as Post)}>
                         </PostCard>
                     );
                 })}
             </div>
+            <br />
+            <Link className={"unstyled"}
+                  href={`/content/dev`} >
+                <h2>Meet the developer!</h2>
+            </Link>
         </main>
   );
 }

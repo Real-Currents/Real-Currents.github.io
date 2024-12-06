@@ -6,7 +6,6 @@ import { getIntroContent } from "@/utils";
 
 import "./fonts.css";
 import "./globals.css";
-import StaticRewriteComponent from "@/components/StaticRewriteComponent";
 
 const comfortaa = Comfortaa({ subsets: ["latin"] });
 

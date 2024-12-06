@@ -6,3 +6,18 @@ $headings-font-weight:  500 !default;
 h1, h2, h3, h4, h5, h6 {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
 }
+
+img.img-fluid {
+  display: block !important;
+  clear: both;
+  max-width: 100%;
+  height: auto;
+}
+
+*.vr-button {
+  display: none;
+}
+
+*.vr-button.enabled {
+  display: block;
+}

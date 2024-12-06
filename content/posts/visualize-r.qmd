@@ -15,7 +15,7 @@ format:
     variant: +yaml_metadata_block
 ---
 
-<div id="vizr-app" role="main" style="width: 100%; min-width: 800px; margin-left: -100px;">
+<div id="vizr-app" role="main" style="width: 100%; min-width: 800px; margin-left: -86px;">
 &nbsp;
 </div>
 
