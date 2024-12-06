@@ -22,6 +22,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       contents: write
+      id-token: write # This is required for requesting the JWT
+      # https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-cloud-providers#updating-your-github-actions-workflow
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
