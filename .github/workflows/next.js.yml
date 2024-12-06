@@ -34,8 +34,18 @@ jobs:
         with:
           submodules: 'true'
 
+      - name: Print GITHUB_TOKEN
+        run: echo ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print GITHUB_WORKSPACE
+        run: echo ${GITHUB_WORKSPACE}
+
+      - name: Print working directory
+        run: echo $(pwd)
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
       # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
@@ -56,23 +66,6 @@ jobs:
       #        with:
       #          cache-version: 1
 
-      - name: Print GITHUB_TOKEN
-        run: echo ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Print GITHUB_WORKSPACE
-        run: echo ${GITHUB_WORKSPACE}
-
-      #      - name: Render and Publish
-      #        uses: quarto-dev/quarto-actions/publish@v2
-      #        with:
-      #          target: gh-pages
-      #        env:
-      #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      #      - name: List outputs after quarto render
-      #        run: |
-      #          ls -l "${GITHUB_WORKSPACE}/_site"
-
       - name: Setup Node.js
         uses: ./.github/workflows/node.js
 
@@ -85,13 +78,13 @@ jobs:
         run: npm run build
 
       - name: List build outputs
-        run: ls -lA ./out/
+        run: ls -lA ./out
 
       - name: Upload static files as artifact
         id: deploy
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
-          path: out/
+          path: ./out
 
       - name: Publish to GitHub Pages
         id: publish
