@@ -41,6 +41,7 @@ jobs:
         with:
           cache-version: 2
           packages: |
+            any::jsonlite
             any::png
             any::quarto
             any::renv

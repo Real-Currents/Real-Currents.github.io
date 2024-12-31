@@ -37,6 +37,11 @@ if (!require("png")) {
     install.packages("png")
 }
 library(png)
+
+if (!require("jsonlite")) {
+    install.packages("jsonlite")
+}
+library(jsonlite)
 ```
 
 If the output target of your Rmd (R Markdown) content is HTML, R has some methods for turning R data into JavaScript or JSON data and printing the results within HTML tags.
