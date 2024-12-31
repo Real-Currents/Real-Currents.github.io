@@ -50,6 +50,7 @@ jobs:
         with:
           cache-version: 2
           packages: |
+            any::png
             any::quarto
             any::renv
             any::rmarkdown
