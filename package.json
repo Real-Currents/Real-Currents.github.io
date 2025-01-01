@@ -34,7 +34,7 @@
     "lint": "next lint",
     "next": "next",
     "preview": "quarto preview",
-    "render:markdown": "cd content && quarto render README.qmd --to gfm --output index.md && npm run render:about && npm run render:dev && npm run render:posts",
+    "render:markdown": "cd content && quarto render README.qmd --to gfm --output index.md && npm run render:about && npm run render:dev && npm run render:posts && bash -c \"cd ../ && ls -l ./ && cp -LR site_libs public/ && rm -rf site_libs && rm search.json\"",
     "render:about": "cd content/about && quarto render index.qmd --to gfm --output index.md --output-dir .",
     "render:dev": "cd content/dev && quarto render --output-dir . && quarto render index.qmd --to gfm --output README.md --output-dir .",
     "render:js-demos": "bash -c \"cd content/js-demos && quarto render --output-dir . && quarto render index.qmd --to gfm --output README.md --output-dir . && quarto render index.qmd --to html --output index.html --output-dir .  && cd ../../ && ls -l ./ && cp -LR site_libs public/ && rm -rf site_libs && rm search.json\"",

@@ -1,10 +1,15 @@
 ---
-title: "Fast analytics on FCC (big) dataset"
-author: "Olivier Leroy"
+title: "Fast analytics on FCC's (big) data"
+author:
+  - "John Hall"
+  - "Olivier Leroy"
 date: "2024-08-16"
 categories: [cli, code, duckDB, broadband]
-image: thumbnail.png
 draft: false
+format:
+  gfm:
+    variant: +yaml_metadata_block
+image: thumbnail.png
 ---
 
 ## Overview
@@ -15,7 +20,7 @@ TODO: Synopsis... in this _series_ of posts we:
 
   2. briefly explore the available public data
 
-  3. share the data and applications that we have produced in order to help rural broadband providers maximize their access to this unprecedented availability of public and private investment funding
+  3. share the data and applications that we have produced in order to help rural broadband providers maximize their access to the unprecedented availability of public and private investment funding
 
 
 ### The challenge and the opportunity

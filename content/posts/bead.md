@@ -1,8 +1,8 @@
 ---
 title: Accessing data about access to broadband
 abstract: >-
-  How to drive data equity and access for rural places pursuing federal grants
-  from the Broadband Equity Access and Deployment (BEAD) program
+  We want to expand data equity and access for rural places pursuing federal
+  grants from the Broadband Equity Access and Deployment (BEAD) program
 author:
   - John Hall
   - Olivier Leroy
@@ -24,6 +24,7 @@ draft: false
 format:
   gfm:
     variant: +yaml_metadata_block
+image: thumbnail.png
 ---
 
 
@@ -47,4 +48,4 @@ TODO: …
 - TODO: … [Broadband Climate Risk Mitigation
   Tool](https://broadband-risk.ruralinnovation.us/)
 
-## TODO: Reference [Fast analytics on FCC (big) dataset](../fcc-duckdb) …
+## TODO: Reference [Fast analytics on FCC (big) dataset](fcc-duckdb) …

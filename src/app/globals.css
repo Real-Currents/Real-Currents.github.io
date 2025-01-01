@@ -174,7 +174,7 @@ div#content {
 
 #content * p, * p {
   clear: both;
-  padding-top:8px
+  padding-top: 2px
 }
 
 #content * li, #content * p, * li, * p {
@@ -285,7 +285,7 @@ div#content h2, div#content h3, div#content h4 {
 div#content h3 {
   width: 604px;
   min-width: 360px;
-  min-height: 54px;
+  min-height: 28px;
   margin-top: 52px;
   border-top: 2px solid #7f7fff;
 }

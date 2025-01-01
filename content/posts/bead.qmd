@@ -1,6 +1,6 @@
 ---
 title: "Accessing data about access to broadband"
-abstract: "How to drive data equity and access for rural places pursuing federal grants from the Broadband Equity Access and Deployment (BEAD) program"
+abstract: "We want to expand data equity and access for rural places pursuing federal grants from the Broadband Equity Access and Deployment (BEAD) program"
 author:
   - "John Hall"
   - "Olivier Leroy"
@@ -22,6 +22,7 @@ draft: false
 format:
   gfm:
     variant: +yaml_metadata_block
+image: thumbnail.png
 ---
 
 ## Overview
