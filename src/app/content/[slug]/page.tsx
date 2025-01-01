@@ -3,7 +3,10 @@ import fs from "fs";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
 import { Post } from "@/types";
-import { metadata, getPostMetadata } from "@/utils";
+import {
+    metadata,
+    // getPostMetadata as getMetadata
+} from "@/utils";
 import StaticRewriteComponent from "@/components/StaticRewriteComponent";
 
 interface ContentParams {
@@ -22,11 +25,28 @@ export async function generateStaticParams (): Promise<Post[]> {
     //         { slug: "lemon_poppy_seed_muffins" } // => /content/lemon_poppy_seed_muffins.html
     //     ];
 
+    const slug_metadata = [
+        // ...getMetadata("content/posts"),
+        {
+            title: 'JS Demos',
+            author: 'Revlin John',
+            date: '2020-07-05',
+            draft: false,
+            categories: [ 'GL' ],
+            tags: [ 'GL', 'HTML5', 'JavaScript', 'JS', 'Video', 'WebGL' ],
+            format: {
+                gfm: {
+                    variant: '+yaml_metadata_block'
+                }
+            },
+            slug: 'js-demos.html'
+        }
+    ];
+
+    console.log("slug_metadata:", slug_metadata);
+
     return (
-        // posts.map((post) => ({
-        //     slug: post.slug,
-        // }));
-        getPostMetadata("content/posts")
+        slug_metadata
     );
 }
 
@@ -37,8 +57,8 @@ export async function generateMetadata ({ params }: ContentParams) {
     }
 }
 
-function getPostContent (slug: string) {
-    const file = `./content/posts/${slug}.md`;
+function getContent (slug: string) {
+    const file = `./content/${slug.replace(".html", "")}/index.md`;
     const content = fs.readFileSync(file, "utf8");
 
     const matterResult = matter(content);
@@ -49,7 +69,7 @@ function getPostContent (slug: string) {
 // using the `params` returned by `generateStaticParams`
 export default function ContentPage ({ params }: ContentParams) {
     const { slug } = params;
-    const postMatter = getPostContent(slug);
+    const postMatter = getContent(slug);
 
     return (
         <main>
