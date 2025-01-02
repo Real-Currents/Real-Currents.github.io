@@ -9,4 +9,4 @@
 	url = https://github.com/Real-Currents/js-demos.git
 [submodule "content/posts/proj-fcc-report"]
 	path = content/posts/proj-fcc-report
-	url = git@github.com:ruralinnovation/proj-fcc-report.git
+	url = git@github.com:dancingfrog/proj-fcc-report.git

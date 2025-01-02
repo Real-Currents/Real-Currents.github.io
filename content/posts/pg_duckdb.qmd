@@ -5,11 +5,14 @@ author:
   - "Olivier Leroy"
 date: "2024-07-14"
 categories: [cli, code, postgresql, duckDB, broadband]
+format:
+  gfm:
+    variant: +yaml_metadata_block
 image: pg_duckdb/DuckDB_Postgre_SQL_Logo.png
 ---
 
-::: callout-tip
-This article was originally posted on the [Mapping & Data Analytics Blog](https://ruralinnovation.github.io/blog/){.external target="_blank"} that is published by the [Center on Rural Innovation (CORI)](https://ruralinnovation.us/){.external target="_blank"}.
+::: {.callout-note}
+This article was originally posted by [Olivier Leroy](https://github.com/defuneste){target="_blank"} on the [Mapping & Data Analytics Blog](https://ruralinnovation.github.io/blog/){.external target="_blank"} that is published by the [Center on Rural Innovation (CORI)](https://ruralinnovation.us/){.external target="_blank"}.
 :::
 
 There are a lot of conversations — understandably — on the use of [Apache Parquet](https://parquet.apache.org/){.external target="_blank"}, [Apache Arrow](https://arrow.apache.org/){.external target="_blank"} and [DuckDB](https://duckdb.org/){.external target="_blank"}.
