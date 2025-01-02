@@ -5,6 +5,8 @@ project:
   render:
     - "!*.md"
     - "*.qmd"
+    - "**/*.qmd"
+    - "!content/posts/proj-fcc-report/*.qmd"
 
 website:
   title: "Real~Currents"

@@ -10,7 +10,6 @@ categories:
   - api
   - bead
   - broadband
-  - code
   - data
   - FCC
   - federal
@@ -46,6 +45,8 @@ In this post, we aim to:
   coverage.
 - Share the data and tools we’ve developed to help rural broadband
   providers.
+
+<br />
 
 ## The challenge and the opportunity
 
@@ -247,6 +248,8 @@ TODO: … in describing the web apps, note that all are served by the
 <a href="https://cori-data-api.ruralinnovation.us/" class="external"
 target="_blank">CORI Data API</a> (which is provisioned by
 `cori.data.dcc`)
+
+Copyright © 2025 Center On Rural Innovation
 
 <br />
 

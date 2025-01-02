@@ -10,7 +10,6 @@ categories:
   - api
   - bead
   - broadband
-  - code
   - data
   - FCC
   - federal
@@ -26,15 +25,17 @@ image: thumbnail.png
 ---
 
 
-The FCC's public release of the National Broadband Map should, in theory, allow broadband providers to maximize their access to the unprecedented availability of public and private investment funding, but utilizing this data continues to pose challenges for **rural** service providers. 
+The FCC's public release of the National Broadband Map should, in theory, allow broadband providers to maximize their access to the unprecedented availability of public and private investment funding, but utilizing this data continues to pose challenges for **rural** service providers.
 
-One of our goals at the [Center on Rural Innovation (CORI)](https://ruralinnovation.us/){.external target="_blank"} is to support rural stakeholders with practical insights and applications that will empower them to bridge the digital divide and build equitable internet access in underserved communities. 
+One of our goals at the [Center on Rural Innovation (CORI)](https://ruralinnovation.us/){.external target="_blank"} is to support rural stakeholders with practical insights and applications that will empower them to bridge the digital divide and build equitable internet access in underserved communities.
 
 In this post, we aim to:
 
 - Frame the pressing challenges faced by rural broadband providers.
 - Explore the wealth of available public data about broadband access and coverage.
 - Share the data and tools we’ve developed to help rural broadband providers.
+
+<br />
 
 
 ## The challenge and the opportunity
@@ -51,14 +52,14 @@ The following explanation of the data sourced from the FCC is extracted from COR
 We rely on two key datasets from the Federal Communications Commission (FCC):
 
 1) **National Broadband Map** ([NBM](https://broadbandmap.fcc.gov/home){.external target="_blank"}):
-  - Provides granular information on broadband service availability at specific locations, including details about service providers, technology types, and advertised speeds.
+- Provides granular information on broadband service availability at specific locations, including details about service providers, technology types, and advertised speeds.
 
 2) **Broadband Funding Map** ([BFM](https://fundingmap.fcc.gov/home){.external target="_blank"}):
-  - Offers insights into federally funded broadband infrastructure projects, detailing program boundaries and project-level information.
+- Offers insights into federally funded broadband infrastructure projects, detailing program boundaries and project-level information.
 
 Both datasets are publicly available under permissive licensing, making them invaluable tools for analyzing broadband coverage and funding opportunities. Licensing information can be found [here](https://broadbandmap.fcc.gov/about){.external target="_blank"} and [here](https://fundingmap.fcc.gov/about){.external target="_blank"}, respectively.[^license_and_attribution]
 
-  [^license_and_attribution]: <em>License and Attribution language from the FCC<em>:
+[^license_and_attribution]: <em>License and Attribution language from the FCC<em>:
 <br />
 <br /> Broadband availability data from the BDC, and data from the U.S. Census Bureau that are presented on this site, are offered free and not subject to copyright restriction. Data and content created by government employees within the scope of their employment are not subject to domestic copyright protection under 17 U.S.C. § 105. See, e.g., [U.S. Government Works](https://www.usa.gov/government-copyright).
 <br />
@@ -93,6 +94,8 @@ The NBM offers detailed broadband availability information:
 
 This dataset is an abstraction of the "Fabric" locations data developed by **CostQuest**. The Fabric provides precise geolocation data for **Broadband Serviceable Locations** (BSLs), which are updated biannually (June and December) with interim updates every two weeks. The exact coordinates for each locations are only inclued in the Fabric dataset, so using the National Broadband Map data we can only link a record for a location to a Census Block (2020 vintage) or H3 hexagon.
 
+!["What's on the national broadband map" Source: [https://www.fcc.gov/BroadbandData](https://www.fcc.gov/BroadbandData)](thumbnail.png){#fig-broadbanddata}
+
 Every location is characterized by:
 
 - Who is providing those services (`frn`, `provider_id`, and `brand_name`)
@@ -111,7 +114,7 @@ Sometimes the process of collecting those two datasets is called **B**roadband *
 
 #### Broadband Funding Map (BFM)
 
-The BFM provides information about "*broadband infrastructure deployment projects funded by the Federal government throughout the United States*". The public data: 
+The BFM provides information about "*broadband infrastructure deployment projects funded by the Federal government throughout the United States*". The public data:
 
 - Categorizes projects by program and geographic boundaries.
 - Highlights funding from four federal agencies across 12 programs, including 1,853 projects as of May 2024.
@@ -170,7 +173,10 @@ TODO: ... write more about `cori.data.fcc` ...
 TODO: ... in describing the web apps, note that all are served by the [CORI Data API](https://cori-data-api.ruralinnovation.us/){.external target="_blank"} (which is provisioned by `cori.data.dcc`)
 
 
+Copyright © 2025 Center On Rural Innovation
+
 <br />
+
 
 ### Footnotes
 
