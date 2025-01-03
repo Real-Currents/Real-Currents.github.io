@@ -4,7 +4,7 @@ subtitle: "Accessing data about access to broadband"
 author:
   - "John Hall"
   - "Olivier Leroy"
-date: "2024-08-16"
+date: "2025-01-01"
 categories:
   - access
   - api
@@ -21,7 +21,7 @@ draft: false
 format:
   gfm:
     variant: +yaml_metadata_block
-image: thumbnail.png
+image: img/whats-on-the-national-broadband-map-113023-1.png
 ---
 
 
@@ -94,7 +94,7 @@ The NBM offers detailed broadband availability information:
 
 This dataset is an abstraction of the "Fabric" locations data developed by **CostQuest**. The Fabric provides precise geolocation data for **Broadband Serviceable Locations** (BSLs), which are updated biannually (June and December) with interim updates every two weeks. The exact coordinates for each locations are only inclued in the Fabric dataset, so using the National Broadband Map data we can only link a record for a location to a Census Block (2020 vintage) or H3 hexagon.
 
-!["What's on the national broadband map" Source: [https://www.fcc.gov/BroadbandData](https://www.fcc.gov/BroadbandData)](thumbnail.png){#fig-broadbanddata}
+!["What's on the national broadband map" Source: [https://www.fcc.gov/BroadbandData](https://www.fcc.gov/BroadbandData)](img/whats-on-the-national-broadband-map-113023-1.png){#fig-broadbanddata}
 
 Every location is characterized by:
 
@@ -104,7 +104,7 @@ Every location is characterized by:
 - Ways to geographically locate it (`state_abbr`, `block_geoid`, `h3_res8_id`)
 
 ::: {.callout-tip}
-A location (see [What is a BSL?](#what-is-a-broadband-serviceable-location-bsl)) can be covered by multiple Internet Services Provides (ISP) with  potentially different services and technologies. Hence, it can represented in the data can by many "rows".
+A location (see [What is a BSL?](#what-is-a-broadband-serviceable-location-bsl)) can be covered by multiple Internet Services Provides (ISP) with potentially different services and technologies. Hence, it can be represented in the data by many "rows".
 :::
 
 :::{.aside}
@@ -168,7 +168,7 @@ To support rural broadband providers and policymakers, we have developed the fol
 
 - [**Broadband Climate Risk Mitigation Tool**](https://broadband-risk.ruralinnovation.us/){.external target="_blank"}: Assesses climate risks posed to broadband infrastructure in order to enhance resiliency.
 
-TODO: ... write more about `cori.data.fcc` ...
+Because the FCC publishes major releases of this data twice a year and minor updates at a nearly biweekly cadence, we developed an `R` package called `cori.data.fcc` to ...
 
 TODO: ... in describing the web apps, note that all are served by the [CORI Data API](https://cori-data-api.ruralinnovation.us/){.external target="_blank"} (which is provisioned by `cori.data.dcc`)
 

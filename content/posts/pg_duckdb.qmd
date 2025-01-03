@@ -4,6 +4,7 @@ author:
   - "John Hall"
   - "Olivier Leroy"
 date: "2024-07-14"
+draft: true
 categories: [cli, code, postgresql, duckDB, broadband]
 format:
   gfm:

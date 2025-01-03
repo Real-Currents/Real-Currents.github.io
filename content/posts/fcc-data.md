@@ -4,7 +4,7 @@ subtitle: Accessing data about access to broadband
 author:
   - John Hall
   - Olivier Leroy
-date: '2024-08-16'
+date: '2025-01-01'
 categories:
   - access
   - api
@@ -21,7 +21,7 @@ draft: false
 format:
   gfm:
     variant: +yaml_metadata_block
-image: thumbnail.png
+image: img/whats-on-the-national-broadband-map-113023-1.png
 ---
 
 
@@ -126,6 +126,15 @@ coordinates for each locations are only inclued in the Fabric dataset,
 so using the National Broadband Map data we can only link a record for a
 location to a Census Block (2020 vintage) or H3 hexagon.
 
+<div id="fig-broadbanddata">
+
+![](img/whats-on-the-national-broadband-map-113023-1.png)
+
+Figure 1: “What’s on the national broadband map” Source:
+<https://www.fcc.gov/BroadbandData>
+
+</div>
+
 Every location is characterized by:
 
 - Who is providing those services (`frn`, `provider_id`, and
@@ -142,8 +151,8 @@ Every location is characterized by:
 > A location (see [What is a
 > BSL?](#what-is-a-broadband-serviceable-location-bsl)) can be covered
 > by multiple Internet Services Provides (ISP) with potentially
-> different services and technologies. Hence, it can represented in the
-> data can by many “rows”.
+> different services and technologies. Hence, it can be represented in
+> the data by many “rows”.
 
 <div class="aside">
 
