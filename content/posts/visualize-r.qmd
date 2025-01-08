@@ -1,5 +1,5 @@
 ---
-title: 'Visualizing R Data with SveltR'
+title: 'Visualizing data with Svelte/R'
 author: 'John Hall'
 date: '2020-03-14'
 draft: false
