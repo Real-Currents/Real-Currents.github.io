@@ -4,11 +4,17 @@ author: 'John Hall'
 date: '2020-03-14'
 draft: false
 categories:
-  - GL
+  - Data
+  - Viz
 tags:
+  - 3D
+  - Data
   - GL
+  - R
   - SvelteJS
   - SvelteGL
+  - Visualization
+  - Viz
   - WebGL
 format:
   gfm:
