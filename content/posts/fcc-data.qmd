@@ -44,6 +44,12 @@ Access to reliable and high-speed broadband is more critical than ever, yet vast
 
 The convergence of new funding opportunities and improved datasets represents an unprecedented opportunity to close the digital divide. By leveraging accurate data and strategic planning, rural broadband providers can maximize their impact and secure funding to expand their services.
 
+### Why this matters
+
+[TODO] How connectivity and communications are required to affect economic stability and growth within and between communities...
+  - reference Research report [Beyond connectivity: The role of broadband in rural economic growth and resilience](https://ruralinnovation.us/resources/reports/report-the-role-of-broadband-in-rural-economic-growth-and-resilience/)
+  - reference recent natural disasters (wild fires) and why resilient communications infrastructure is essential to coordinating both emergency and recovery efforts, i.e. how do thousands of newly unhoused people access support services (federal, state, private insurance, private non-profits, etc.) => requires massive and quick deployment of IT/Software/Tech
+
 
 ## The available data
 
@@ -170,7 +176,7 @@ To support rural broadband providers and policymakers, we have developed the fol
 
 Because the FCC publishes major releases of this data twice a year and minor updates at a nearly biweekly cadence, we developed an `R` package called `cori.data.fcc` to ...
 
-TODO: ... in describing the web apps, note that all are served by the [CORI Data API](https://cori-data-api.ruralinnovation.us/){.external target="_blank"} (which is provisioned by `cori.data.dcc`)
+[TODO]: ... in describing the web apps, note that all are served by the [CORI Data API](https://cori-data-api.ruralinnovation.us/){.external target="_blank"} (which is provisioned by `cori.data.dcc`)
 
 
 Copyright © 2025 Center On Rural Innovation
