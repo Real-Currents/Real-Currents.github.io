@@ -47,9 +47,11 @@ The convergence of new funding opportunities and improved datasets represents an
 ### Why this matters now
 
 [TODO] How connectivity and communications are required to affect economic stability and growth within and between communities...
+  - _Broadband access if part of a bigger story about the technical infrastructure that is required for local communities to thrive in a globalized world economy._
   - reference Research report [Beyond connectivity: The role of broadband in rural economic growth and resilience](https://ruralinnovation.us/resources/reports/report-the-role-of-broadband-in-rural-economic-growth-and-resilience/)
   - reference recent natural disasters (wild fires) and why resilient communications infrastructure is essential to coordinating both emergency and recovery efforts
       - i.e, how do thousands of newly unhoused people access support services ([federal](https://www.fema.gov/press-release/20250109/fema-assistance-available-individuals-affected-wildfires-california), [state](https://www.ca.gov/lafires/), [county](https://recovery.lacounty.gov/), private insurance, private non-profits, etc.) => requires massive and quick deployment of IT/Software/Tech
+  - Use Rural Broadband Map (+ County Summary) and Broadband Climate Risk Mitigation apps to provide context (+ screenshots) for above ^
 
 
 ## The available data
