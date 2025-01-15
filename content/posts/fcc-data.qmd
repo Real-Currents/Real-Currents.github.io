@@ -44,11 +44,12 @@ Access to reliable and high-speed broadband is more critical than ever, yet vast
 
 The convergence of new funding opportunities and improved datasets represents an unprecedented opportunity to close the digital divide. By leveraging accurate data and strategic planning, rural broadband providers can maximize their impact and secure funding to expand their services.
 
-### Why this matters
+### Why this matters now
 
 [TODO] How connectivity and communications are required to affect economic stability and growth within and between communities...
   - reference Research report [Beyond connectivity: The role of broadband in rural economic growth and resilience](https://ruralinnovation.us/resources/reports/report-the-role-of-broadband-in-rural-economic-growth-and-resilience/)
-  - reference recent natural disasters (wild fires) and why resilient communications infrastructure is essential to coordinating both emergency and recovery efforts, i.e. how do thousands of newly unhoused people access support services (federal, state, private insurance, private non-profits, etc.) => requires massive and quick deployment of IT/Software/Tech
+  - reference recent natural disasters (wild fires) and why resilient communications infrastructure is essential to coordinating both emergency and recovery efforts
+      - i.e, how do thousands of newly unhoused people access support services ([federal](https://www.fema.gov/press-release/20250109/fema-assistance-available-individuals-affected-wildfires-california), [state](https://www.ca.gov/lafires/), [county](https://recovery.lacounty.gov/), private insurance, private non-profits, etc.) => requires massive and quick deployment of IT/Software/Tech
 
 
 ## The available data
