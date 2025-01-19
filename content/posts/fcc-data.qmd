@@ -171,11 +171,13 @@ To support rural broadband providers and policymakers, we have developed the fol
 
 - [**`cori.data.fcc`**](https://ruralinnovation.github.io/cori.data.fcc/){.external target="_blank"}: `R` package that facilitates the discovery, analysis, and use of FCC public data releases.
 
-- [**Rural Broadband Map**](https://rural-broadband-map.ruralinnovation.us/){.external target="_blank"}: Visualizes broadband availability and funding data to identify gaps and opportunities.
+- [**`CORI Data API`**](https://cori-data-api.ruralinnovation.us/){.external target="_blank"}: [TODO] Introduce API and derivative apps...
 
-- [**Rural Broadband County Summary**](https://broadband-county-summary.ruralinnovation.us/){.external target="_blank"}: Summarizes broadband availability and funding data per county (name or FIPS).
+  - [**Rural Broadband Map**](https://rural-broadband-map.ruralinnovation.us/){.external target="_blank"}: Visualizes broadband availability and funding data to identify gaps and opportunities.
 
-- [**Broadband Climate Risk Mitigation Tool**](https://broadband-risk.ruralinnovation.us/){.external target="_blank"}: Assesses climate risks posed to broadband infrastructure in order to enhance resiliency.
+  - [**Rural Broadband County Summary**](https://broadband-county-summary.ruralinnovation.us/){.external target="_blank"}: Summarizes broadband availability and funding data per county (name or FIPS).
+
+  - [**Broadband Climate Risk Mitigation Tool**](https://broadband-risk.ruralinnovation.us/){.external target="_blank"}: Assesses climate risks posed to broadband infrastructure in order to enhance resiliency.
 
 Because the FCC publishes major releases of this data twice a year and minor updates at a nearly biweekly cadence, we developed an `R` package called `cori.data.fcc` to ...
 
