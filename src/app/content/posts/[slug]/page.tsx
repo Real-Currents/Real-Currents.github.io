@@ -17,11 +17,7 @@ interface ContentParams {
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams (): Promise<Post[]> {
-    const postsMetadata = getPostMetadata("content/posts");
-
-    console.log(postsMetadata);
-
-    return postsMetadata;
+    return getPostMetadata("content/posts");
 }
 
 export async function generateMetadata ({ params }: ContentParams) {

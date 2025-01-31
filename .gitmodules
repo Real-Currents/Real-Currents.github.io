@@ -8,5 +8,5 @@
 	path = content/js-demos
 	url = https://github.com/Real-Currents/js-demos.git
 [submodule "content/posts/proj-fcc-report"]
-	path = content/posts/proj-fcc-report
+	path = content/posts/09_fcc-data/proj-fcc-report
 	url = git@github.com:dancingfrog/proj-fcc-report.git

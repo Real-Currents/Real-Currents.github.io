@@ -16,20 +16,6 @@ export default function Home() {
             // { title: "Cinnamon Rolls", slug: "cinnamon_rolls" }, // => /content/recipes/cinnamon_rolls.html
             // { title: "Lemon Poppy Seed Muffins", slug: "lemon_poppy_seed_muffins" } // => /content/recipes/lemon_poppy_seed_muffins.html
             {
-                title: "Democratizing analytics on FCC's (big) data",
-                content: "",
-                slug: "fcc-data",
-                date: new Date('2024-08-16'),
-                description: "The FCC's public release of the National Broadband Map should, in theory, allow rural broadband providers to maximize their access to the unprecedented availability of public and private investment funding..."
-            },
-            // {
-            //     title: "From elephant to duck!",
-            //     content: "",
-            //     slug: "pg_duckdb",
-            //     date: new Date('2024-07-14'),
-            //     description: "There are a lot of conversations — understandably — on the use of Apache Parquet, Apache Arrow and DuckDB..."
-            // },
-            {
                 title: "Visualizing R Data with SveltR",
                 content: "",
                 slug: "visualize-r", // => /content/posts/visualize-r.html
