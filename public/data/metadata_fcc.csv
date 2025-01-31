@@ -1,0 +1,42 @@
+Fields,Description,Census Block,Census Tract,Census Counties,Census Places
+geoid_st,char(2),Yes,Yes,Yes,Yes
+geoid_cty,char(5),Yes,Yes,Yes,Yes
+geoid_tr,char(11),Yes,Yes,Yes,Yes
+geoid_pl ,TBD,TBD,TBD,TBD,Yes
+geoid_bl,char(15),Yes,NA,NA,NA
+cnt_total_locations,count of every locations reported,Yes,Yes,Yes,Yes
+cnt_bcat_locations,count of every locations that are not:/low_latency = FALSE/max up/down = 0/technology 60-61-70,Yes,Yes,Yes,Yes
+cnt_25_3,count of bcat locations that match 25/3 speeds,Yes,Yes,Yes,Yes
+cnt_100_20,count of bcat locations that match 100/20 speeds,Yes,Yes,Yes,Yes
+cnt_100_100,count of bcat locations that match 100/100 speeds,Yes,Yes,Yes,Yes
+cnt_fiber,count of bcat locations with fiber,Yes,Yes,Yes,Yes
+pct_25_3,cnt_100_20/cnt_total_locations,Yes,No,No,No
+pct_100_20,cnt_25_3/cnt_total_locations,Yes,No,No,No
+bl_100_20_area,Temp logic to determine if block is not_reported/unserved_area/unserved_area/underserved_area/served_area,Yes,No,No,No
+bl_25_3_area,Temp logic to determine if block is not_reported/unserved_area/unserved_area/underserved_area/served_area,Yes,No,No,No
+category,Determine if block is Not Reported/Unserved/Underserved/Served,Yes,No,No,No
+pct_is_fiber,cnt_fiber_locations / cnt_total_locations,Yes,No,No,No
+pct_is_underserved,1 - cnt_100_20 / cnt_total_locations,Yes,No,No,No
+pct_is_unserved,1 - cnt_25_3 / cnt_total_locations,Yes,No,No,No
+geom,"geometry, MultiPolygon, 4269",Yes,No,No,No
+distinct_frn,PG array of distinct FRN,Yes,Yes,Yes,Yes
+distinct_frn_cnt,count of distinct FRN,Yes,Yes,Yes,Yes
+tech_code,PG array of disctint technology code,Yes,Yes,Yes,Yes
+max_ad_down,Max speed download,Yes,No,No,No
+max_ad_up,Max speed upload,Yes,No,No,No
+max_ad_down_gig_other,Max speed download when 1k/1k and not fiber,Yes,No,No,No
+max_ad_up_gig_other,Max speed upload  when 1k/1k and not fiber,Yes,No,No,No
+max_ad_down_gig_fiber,Max speed download when 1k/1k and fiber,Yes,No,No,No
+max_ad_up_gig_fiber,Max speed upload when 1k/1k and fiber,Yes,No,No,No
+max_ad_down_all_fiber,Max speed download when fiber,Yes,No,No,No
+max_ad_up_all_fiber,Max speed upload when fiber,Yes,No,No,No
+max_ad_down_cable,Max speed download when cable,Yes,No,No,No
+max_ad_up_cable,Max speed upload when cable,Yes,No,No,No
+max_ad_down_adsl,Max speed download when adsl,Yes,No,No,No
+max_ad_up_adsl,Max speed upload when adsl,Yes,No,No,No
+max_ad_down_fixed_wireless,Max speed download when wireless (not unlicensed),Yes,No,No,No
+max_ad_up_fixed_wireless,Max speed upload when wireless (not unlicensed),Yes,No,No,No
+cnt_gig_other,cnt of bcat when 1k/1k and not fiber,Yes,Yes,Yes,Yes
+cnt_gig_fiber,cnt of bcat when 1k/1k and fiber,Yes,Yes,Yes,Yes
+cnt_fiber_cable_access,cnt of bcat that is fiber or cable,Yes,Yes,Yes,Yes
+cnt_dsl,cnt of bcat that is dsl,Yes,Yes,Yes,Yes
