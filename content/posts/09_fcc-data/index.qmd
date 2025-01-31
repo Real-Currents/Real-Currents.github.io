@@ -27,7 +27,7 @@ image: img/whats-on-the-national-broadband-map-113023-1.png
 
 The FCC's public release of the National Broadband Map should, in theory, allow broadband providers to maximize their access to the unprecedented availability of public and private investment funding, but utilizing this data continues to pose challenges for **rural** service providers.
 
-One of our goals at the [Center on Rural Innovation (CORI)](https://ruralinnovation.us/){.external target="_blank"} is to support rural stakeholders with practical insights and applications that will empower them to bridge the digital divide and build equitable internet access in underserved communities.
+One of our goals at the [Center on Rural Innovation (CORI)](https://ruralinnovation.us/){.external target="_blank"} is to support rural stakeholders with practical insights and applications that will empower them to bridge the digital divide and expand equitable access to the internet across underserved communities.
 
 In this post, we aim to:
 
@@ -40,9 +40,9 @@ In this post, we aim to:
 
 ## The challenge and the opportunity
 
-Access to reliable and high-speed broadband is more critical than ever, yet vast areas of rural America remain underserved. This digital gap limits opportunities for education, healthcare, economic growth, and civic engagement in these regions. With billions of dollars in federal and state funding now available, the ability to analyze and interpret broadband data effectively is paramount. Providers need actionable insights to identify unserved and underserved areas, optimize funding applications, and plan infrastructure investments that meet local needs.
+At this time, reliable high-speed broadband access and widespread digital literacy are more critical than ever, yet vast areas of rural America remain underserved. This digital gap limits opportunities for education, healthcare, economic growth, and civic engagement in these regions. With billions of dollars in federal and state funding now available, the ability to analyze and interpret broadband data effectively is paramount. Providers need actionable insights to identify unserved and underserved areas, optimize funding applications, and plan infrastructure investments that meet local needs.
 
-The convergence of new funding opportunities and improved datasets represents an unprecedented opportunity to close the digital divide. By leveraging accurate data and strategic planning, rural broadband providers can maximize their impact and secure funding to expand their services.
+The convergence of new funding opportunities and improved datasets represents a once-in-a-generation opportunity to close the digital divide. By leveraging accurate data and strategic planning, rural broadband providers can maximize their impact and secure funding to expand their services.
 
 ### Why this matters now
 
