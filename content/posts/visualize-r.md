@@ -1,14 +1,20 @@
 ---
-title: Visualizing R Data with SveltR
+title: Visualizing data with Svelte/R
 author: John Hall
 date: '2020-03-14'
 draft: false
 categories:
-  - GL
+  - Data
+  - Viz
 tags:
+  - 3D
+  - Data
   - GL
+  - R
   - SvelteJS
   - SvelteGL
+  - Visualization
+  - Viz
   - WebGL
 format:
   gfm:
@@ -32,8 +38,6 @@ printing the results within HTML tags. <br /> <br />
 style="float: right; width:256px; padding: 1%;" alt="heightmap" /> After
 using R to read each pixel of this heightmap, the table (data.frame) is
 written to json … <br /> <br /> <br />
-
-    Loading required package: jsonlite
 
 <div id="gl_data_in_html">
 
