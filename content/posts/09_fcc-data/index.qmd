@@ -32,8 +32,8 @@ One of our goals at the [Center on Rural Innovation (CORI)](https://ruralinnovat
 In this post, we aim to:
 
 - Frame the pressing challenges faced by rural broadband providers.
-- Explore the wealth of available public data about broadband access and coverage.
-- Share the data and tools we’ve developed to help rural broadband providers.
+- Explore the available public data about broadband access and coverage.
+- Share the data and tools we’ve developed to help rural communities and broadband providers.
 
 <br />
 
@@ -42,16 +42,28 @@ In this post, we aim to:
 
 At this time, reliable high-speed broadband access and widespread digital literacy are more critical than ever, yet vast areas of rural America remain underserved. This digital gap limits opportunities for education, healthcare, economic growth, and civic engagement in these regions. With billions of dollars in federal and state funding now available, the ability to analyze and interpret broadband data effectively is paramount. Providers need actionable insights to identify unserved and underserved areas, optimize funding applications, and plan infrastructure investments that meet local needs.
 
-The convergence of new funding opportunities and improved datasets represents a once-in-a-generation opportunity to close the digital divide. By leveraging accurate data and strategic planning, rural broadband providers can maximize their impact and secure funding to expand their services.
 
 ### Why this matters now
 
-[TODO] How connectivity and communications are required to affect economic stability and growth within and between communities...
-  - _Broadband access if part of a bigger story about the technical infrastructure that is required for local communities to thrive in a globalized world economy._
-  - reference Research report [Beyond connectivity: The role of broadband in rural economic growth and resilience](https://ruralinnovation.us/resources/reports/report-the-role-of-broadband-in-rural-economic-growth-and-resilience/)
-  - reference recent natural disasters (wild fires) and why resilient communications infrastructure is essential to coordinating both emergency and recovery efforts
-      - i.e, how do thousands of newly unhoused people access support services ([federal](https://www.fema.gov/press-release/20250109/fema-assistance-available-individuals-affected-wildfires-california), [state](https://www.ca.gov/lafires/), [county](https://recovery.lacounty.gov/), private insurance, private non-profits, etc.) => requires massive and quick deployment of IT/Software/Tech
-  - Use Rural Broadband Map (+ County Summary) and Broadband Climate Risk Mitigation apps to provide context (+ screenshots) for above ^
+The convergence of new funding opportunities and improved datasets represents a once-in-a-generation opportunity to close the digital divide. By leveraging accurate data and strategic planning, rural broadband providers can maximize their impact and secure funding to expand their services.
+
+Investment in broadband, especially by small, locally-operated providers, can accelerate economic growth and prosperity in rural areas. Higher broadband utilization is associated with increased business growth rates, self-employment, per capita income, and GDP growth. Conversely, areas with low broadband utilization face economic stagnation and population decline.[^report_the_role_of_broadband_in_rural]
+
+[^report_the_role_of_broadband_in_rural]: Weinstein, A., Erouart, M., & Dewbury, A. (2024) _Beyond Connectivity: The role of broadband in rural economic growth and resilience._ Center on Rural Innovation. [https://ruralinnovation.us/resources/reports/report-the-role-of-broadband-in-rural-economic-growth-and-resilience/](https://ruralinnovation.us/resources/reports/report-the-role-of-broadband-in-rural-economic-growth-and-resilience/)
+
+Private capital investment, alongside government funding, can help small broadband providers deploy infrastructure. However, uneven investment can lead to rural-urban and rich-poor divides in internet quality, because internet service providers tend to "invest in the best technology in areas where there are competitive environments, and they will invest in the latest technology in wealthier areas".[^pigeons_are_faster] To counter this tendency we need compelling data-driven narratives and objectives that enable communities to hold their local provider(s) accountable, even as they make critical planning decisions that will reverberate for decades.[^capital_beginning_to_flow]
+
+[^pigeons_are_faster]: _Pigeons are still (sometimes) faster than your internet_ [https://www.washingtonpost.com/technology/2023/11/10/pigeons-are-faster-than-your-internet/](https://www.washingtonpost.com/technology/2023/11/10/pigeons-are-faster-than-your-internet/)
+
+[^capital_beginning_to_flow]: _Capital Beginning to Flow in Advance of BEAD Allocations - Inside Towers_ [https://insidetowers.com/capital-beginning-to-flow-in-advance-of-bead-allocations/](https://insidetowers.com/capital-beginning-to-flow-in-advance-of-bead-allocations/)
+
+Additionally, in the largest offering of federal assistance for broadband infrastructure development to-date,[^bead_nofo] the NTIA guidelines prioritize fiber deployment due to its reliability and future-proof capabilities, followed by other communications technologies (i.e. fixed wireless and satellite).[^alternative_tech_guidance] While the NTIA acknowledges the necessity of alternative technologies in high-cost areas, it has emphasized that fiber’s high data transmission capacity can handle current and future broadband demands, ensuring that networks can grow alongside digital demands. This means that knowing precisely where fiber is available (or planned) is an essential prerequisite for the prudent allocation of investment priorities that will result in a long-term, reliable and resilient broadband ecosystem.[^a_deep_dive]
+
+[^bead_nofo]: _Notices of Funding Opportunity for the Broadband Equity Access and Deployment Program_ [https://www.ntia.gov/funding-programs/internet-all/broadband-equity-access-and-deployment-bead-program/program-documentation/notice-funding-opportunity-broadband-equity-access-and-deployment-program](https://www.ntia.gov/funding-programs/internet-all/broadband-equity-access-and-deployment-bead-program/program-documentation/notice-funding-opportunity-broadband-equity-access-and-deployment-program)
+
+[^alternative_tech_guidance]: _Final Guidance for BEAD Funding of Alternative Broadband Technology_ [https://www.ntia.gov/blog/2025/final-guidance-bead-funding-alternative-broadband-technology](https://www.ntia.gov/blog/2025/final-guidance-bead-funding-alternative-broadband-technology)
+
+[^a_deep_dive]: _A Deep Dive On the BEAD Alternative Technology Guidelines_ [https://www.telecompetitor.com/a-deep-dive-on-the-bead-alternative-technology-guidelines/](https://www.telecompetitor.com/a-deep-dive-on-the-bead-alternative-technology-guidelines/)
 
 
 ## The available data
@@ -84,7 +96,7 @@ Both datasets are publicly available under permissive licensing, making them inv
 
 On March 23, 2020, the Broadband Deployment Accuracy and Technological Availability Act or _Broadband DATA Act_ was enacted[^bdc_enacted]. This led to the FCC's creation of the National Broadband Map (NBM) in November 2022[^fcc_nbm_start] and the Broadband Funding Map in May 2023[^bfn_da_links] (documented in July 2023[^bfm_doc]) as the primary methods of publicly releasing these datasets.
 
-[^bdc_enacted]: [Broadband_Data_and_Mapping_Background_and_Issues_for_the_117th_Congress](https://crsreports.congress.gov/product/pdf/r/r45962){.external target="_blank"}
+[^bdc_enacted]: _Broadband Data and Mapping Background and Issues for the 117th Congress_ [https://crsreports.congress.gov/product/pdf/r/r45962](https://crsreports.congress.gov/product/pdf/r/r45962){.external target="_blank"}
 
 [^fcc_nbm_start]: [https://www.fcc.gov/news-events/notes/2022/11/18/new-broadband-maps-are-finally-here](https://www.fcc.gov/news-events/notes/2022/11/18/new-broadband-maps-are-finally-here){.external target="_blank"}
 
