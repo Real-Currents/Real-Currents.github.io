@@ -1,0 +1,52 @@
+---
+title: 'Visualizing data with WebXR'
+author: 'John Hall'
+date: '2025-01-08'
+draft: false
+categories:
+  - Data
+  - Immersive
+  - Viz
+tags:
+  - 3D
+  - Data
+  - GL
+  - Three
+  - Three.js
+  - Viz
+  - Visualization
+  - WebGL
+  - WebXR
+format:
+  gfm:
+    variant: +yaml_metadata_block
+---
+
+<div id="vizr-app" role="main" style="width: 100%; min-width: 800px; margin-left: -86px;">
+&nbsp;
+</div>
+
+
+## Visualizing data with WebXR
+
+```{r setup, include=FALSE}
+options(warn = -1)
+working_dir <- getwd()
+print(working_dir)
+if (!require("knitr")) {
+    install.packages("knitr")
+    library("knitr")
+}
+knitr::opts_chunk$set(cache = TRUE)
+knitr::opts_chunk$set(echo = TRUE)
+
+if (!require("png")) {
+    install.packages("png")
+}
+library(png)
+
+if (!require("jsonlite")) {
+    install.packages("jsonlite")
+}
+library(jsonlite)
+```

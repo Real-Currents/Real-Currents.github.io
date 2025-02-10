@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@babel/runtime": "^7.25.4",
-    "@swc/cli": "^0.4.0",
+    "@swc/cli": "^0.6.0",
     "@swc/core": "^1.7.14",
     "@types/dateformat": "^5.0.2",
     "@types/node": "^20",
