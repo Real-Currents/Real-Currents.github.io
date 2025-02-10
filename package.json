@@ -26,6 +26,7 @@
     "typescript": "^5"
   },
   "scripts": {
+    "clean": "rm -rf _freeze/* _site/*",
     "dev": "npm run render:markdown && npm run dev:next",
     "dev:next": "next dev",
     "build": "npm run render:markdown && npm run build:next",
