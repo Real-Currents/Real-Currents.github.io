@@ -57,7 +57,7 @@ Private capital investment, alongside government funding, can help small broadba
 
 [^capital_beginning_to_flow]: _Capital Beginning to Flow in Advance of BEAD Allocations - Inside Towers_ [https://insidetowers.com/capital-beginning-to-flow-in-advance-of-bead-allocations/](https://insidetowers.com/capital-beginning-to-flow-in-advance-of-bead-allocations/)
 
-Additionally, in the largest offering of federal assistance for broadband infrastructure development to-date,[^bead_nofo] the NTIA guidelines prioritize fiber deployment due to its reliability and future-proof capabilities, followed by other communications technologies (i.e. fixed wireless and satellite).[^alternative_tech_guidance] While the NTIA acknowledges the necessity of alternative technologies in high-cost areas, it has emphasized that fiber’s high data transmission capacity can handle current and future broadband demands, ensuring that networks can grow alongside digital demands. This means that knowing precisely where fiber is available (or planned) is an essential prerequisite for the prudent allocation of investment priorities that will result in a long-term, reliable and resilient broadband ecosystem.[^a_deep_dive]
+Additionally, in regards to the **Broadband Equity Access and Deployment Program**, the largest offering of federal assistance for broadband infrastructure deployment to-date,[^bead_nofo] the NTIA guidelines prioritize fiber deployment due to its reliability and future-proof capabilities, followed by other communications technologies (i.e. fixed wireless and satellite).[^alternative_tech_guidance] While the NTIA acknowledges the necessity of alternative technologies in high-cost areas, it has emphasized that fiber’s high data transmission capacity can handle current and future broadband demands, ensuring that networks can grow alongside digital demands. This means that knowing precisely where fiber is available (or planned) is an essential prerequisite for the prudent allocation of investment priorities that will result in a long-term, reliable and resilient broadband ecosystem.[^a_deep_dive]
 
 [^bead_nofo]: _Notices of Funding Opportunity for the Broadband Equity Access and Deployment Program_ [https://www.ntia.gov/funding-programs/internet-all/broadband-equity-access-and-deployment-bead-program/program-documentation/notice-funding-opportunity-broadband-equity-access-and-deployment-program](https://www.ntia.gov/funding-programs/internet-all/broadband-equity-access-and-deployment-bead-program/program-documentation/notice-funding-opportunity-broadband-equity-access-and-deployment-program)
 
@@ -180,9 +180,10 @@ These definitions, rooted in the [FCC's Broadband Speed Benchmark](https://www.f
 
 ## Tools for big broadband analytics
 
-Beginning in 2023 and throughout 2024 we developed the following tools to support rural broadband providers and policymakers:
+Beginning in 2023 and throughout 2024 we developed the following tools to support rural broadband providers and local policymakers:
 
 - [**`cori.data.fcc`**](https://ruralinnovation.github.io/cori.data.fcc/){.external target="_blank"}: R package that facilitates the discovery, analysis, retrieval and use of FCC public data releases.
+
   - Because the FCC publishes major releases of this data twice a year and minor updates at a nearly biweekly cadence, we developed `cori.data.fcc` to ease the process of provisioning our various applications with the latest broadband coverage data.
 
 - [**`CORI Data API`**](https://cori-data-api.ruralinnovation.us/){.external target="_blank"}: This backend was designed and implemented to provide an assortment of broadband service metrics and demographic data at multiple geographic levels (county, tract, block, etc.)
@@ -197,7 +198,21 @@ Beginning in 2023 and throughout 2024 we developed the following tools to suppor
     - [**Broadband Climate Risk Mitigation Tool**](https://broadband-risk.ruralinnovation.us/){.external target="_blank"}: Assesses climate risks posed to broadband infrastructure in order to enhance resiliency.
 
 
-[TODO]: ... in describing the web apps, note that all are served by the [CORI Data API](https://cori-data-api.ruralinnovation.us/){.external target="_blank"} (which is provisioned by `cori.data.dcc`)
+These tools are vital for connecting rural areas, acting as a bridge to digital opportunities and effective investment of resources. Instead of just providing raw data, CORI's resources turn complex information into clear insights, enabling deliberate, informed choices about where to direct funds and build infrastructure.
+
+Here’s how this suite of tools helps to improve broadband investment, expansion, and digital skills:
+
+- **Simplified Data Management**: The `cori.data.fcc` package streamlines the process of accessing and utilizing the FCC's frequently updated data, ensuring that users always have the most current information at their fingertips
+- **Comprehensive Data Analysis**: The **CORI Data API** delivers key broadband metrics and demographic information across different geographic areas, enabling a detailed understanding of local needs and opportunities
+- **Targeted Visualizations**: The **Rural Broadband Service Map** offers a visual representation of broadband availability and funding, highlighting areas with service gaps and potential for growth.
+- **Concise Summaries**: The **Rural Broadband County Summary** provides a snapshot of broadband and demographic data for each county, facilitating quick comparisons and informed decision-making.
+- **Risk Assessment**: The **Broadband Climate Risk Mitigation Tool** evaluates potential climate-related threats to broadband infrastructure, promoting the development of more resilient networks.
+
+The broadband tools offered by CORI highlight underserved areas, attracting focused infrastructure investment. By visualizing current broadband availability and funding, the maps identify gaps, guiding strategic expansion and making sure resources go where they're most needed to promote fair access and close the digital gap. In this way we make accessible the data and insights needed to create persuasive funding requests. With broadband metrics and demographic details, applicants to BEAD and other public funding programs can build a strong case for investment, highlighting local needs and project potential.
+
+Internet service providers that avail themselves of these resources can create resilient networks that deliver reliable, high-speed internet by analyzing coverage and assessing climate risks. Strategic broadband investments, particularly by smaller, local providers, spark economic growth in rural areas. As previously mentioned, increased broadband use correlates with higher business growth, self-employment, income, and GDP. CORI tools empower these providers to make data-informed decisions about infrastructure deployment in collaboration with local communities. CORI's resources support data-backed infrastructure planning, aligning investments with community needs.
+
+While focused on infrastructure, these tools also help to increase digital skills by expanding broadband in underserved areas. Reliable internet is essential for digital literacy, enabling multiple stakeholders, policymakers and residents alike, to develop skills and plan their participation in the digital world. Digital literacy leads to individual growth that boosts local economies which then attract new businesses. Ultimately, these tools help the rural communities and broadband providers that strategically and holistically invest in infrastructure, to encourage and enable digital inclusion.
 
 
 Copyright © 2025 Center On Rural Innovation

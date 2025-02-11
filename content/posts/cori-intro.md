@@ -84,18 +84,19 @@ that enable communities to hold their local provider(s) accountable,
 even as they make critical planning decisions that will reverberate for
 decades.[^3]
 
-Additionally, in the largest offering of federal assistance for
-broadband infrastructure development to-date,[^4] the NTIA guidelines
-prioritize fiber deployment due to its reliability and future-proof
-capabilities, followed by other communications technologies (i.e. fixed
-wireless and satellite).[^5] While the NTIA acknowledges the necessity
-of alternative technologies in high-cost areas, it has emphasized that
-fiber’s high data transmission capacity can handle current and future
-broadband demands, ensuring that networks can grow alongside digital
-demands. This means that knowing precisely where fiber is available (or
-planned) is an essential prerequisite for the prudent allocation of
-investment priorities that will result in a long-term, reliable and
-resilient broadband ecosystem.[^6]
+Additionally, in regards to the **Broadband Equity Access and Deployment
+Program**, the largest offering of federal assistance for broadband
+infrastructure deployment to-date,[^4] the NTIA guidelines prioritize
+fiber deployment due to its reliability and future-proof capabilities,
+followed by other communications technologies (i.e. fixed wireless and
+satellite).[^5] While the NTIA acknowledges the necessity of alternative
+technologies in high-cost areas, it has emphasized that fiber’s high
+data transmission capacity can handle current and future broadband
+demands, ensuring that networks can grow alongside digital demands. This
+means that knowing precisely where fiber is available (or planned) is an
+essential prerequisite for the prudent allocation of investment
+priorities that will result in a long-term, reliable and resilient
+broadband ecosystem.[^6]
 
 ## The available data
 
@@ -264,7 +265,7 @@ can be adapted by states to suit local conditions[^13].
 ## Tools for big broadband analytics
 
 Beginning in 2023 and throughout 2024 we developed the following tools
-to support rural broadband providers and policymakers:
+to support rural broadband providers and local policymakers:
 
 - <a href="https://ruralinnovation.github.io/cori.data.fcc/"
   class="external"
@@ -306,10 +307,63 @@ to support rural broadband providers and policymakers:
       Tool</strong></a>: Assesses climate risks posed to broadband
       infrastructure in order to enhance resiliency.
 
-\[TODO\]: … in describing the web apps, note that all are served by the
-<a href="https://cori-data-api.ruralinnovation.us/" class="external"
-target="_blank">CORI Data API</a> (which is provisioned by
-`cori.data.dcc`)
+These tools are vital for connecting rural areas, acting as a bridge to
+digital opportunities and effective investment of resources. Instead of
+just providing raw data, CORI’s resources turn complex information into
+clear insights, enabling deliberate, informed choices about where to
+direct funds and build infrastructure.
+
+Here’s how this suite of tools helps to improve broadband investment,
+expansion, and digital skills:
+
+- **Simplified Data Management**: The `cori.data.fcc` package
+  streamlines the process of accessing and utilizing the FCC’s
+  frequently updated data, ensuring that users always have the most
+  current information at their fingertips
+- **Comprehensive Data Analysis**: The **CORI Data API** delivers key
+  broadband metrics and demographic information across different
+  geographic areas, enabling a detailed understanding of local needs and
+  opportunities
+- **Targeted Visualizations**: The **Rural Broadband Service Map**
+  offers a visual representation of broadband availability and funding,
+  highlighting areas with service gaps and potential for growth.
+- **Concise Summaries**: The **Rural Broadband County Summary** provides
+  a snapshot of broadband and demographic data for each county,
+  facilitating quick comparisons and informed decision-making.
+- **Risk Assessment**: The **Broadband Climate Risk Mitigation Tool**
+  evaluates potential climate-related threats to broadband
+  infrastructure, promoting the development of more resilient networks.
+
+The broadband tools offered by CORI highlight underserved areas,
+attracting focused infrastructure investment. By visualizing current
+broadband availability and funding, the maps identify gaps, guiding
+strategic expansion and making sure resources go where they’re most
+needed to promote fair access and close the digital gap. In this way we
+make accessible the data and insights needed to create persuasive
+funding requests. With broadband metrics and demographic details,
+applicants to BEAD and other public funding programs can build a strong
+case for investment, highlighting local needs and project potential.
+
+Internet service providers that avail themselves of these resources can
+create resilient networks that deliver reliable, high-speed internet by
+analyzing coverage and assessing climate risks. Strategic broadband
+investments, particularly by smaller, local providers, spark economic
+growth in rural areas. As previously mentioned, increased broadband use
+correlates with higher business growth, self-employment, income, and
+GDP. CORI tools empower these providers to make data-informed decisions
+about infrastructure deployment in collaboration with local communities.
+CORI’s resources support data-backed infrastructure planning, aligning
+investments with community needs.
+
+While focused on infrastructure, these tools also help to increase
+digital skills by expanding broadband in underserved areas. Reliable
+internet is essential for digital literacy, enabling multiple
+stakeholders, policymakers and residents alike, to develop skills and
+plan their participation in the digital world. Digital literacy leads to
+individual growth that boosts local economies which then attract new
+businesses. Ultimately, these tools help the rural communities and
+broadband providers that strategically and holistically invest in
+infrastructure, to encourage and enable digital inclusion.
 
 Copyright © 2025 Center On Rural Innovation
 
