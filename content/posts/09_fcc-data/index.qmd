@@ -180,19 +180,22 @@ These definitions, rooted in the [FCC's Broadband Speed Benchmark](https://www.f
 
 ## Tools for big broadband analytics
 
-To support rural broadband providers and policymakers, we have developed the following tools:
+Beginning in 2023 and throughout 2024 we developed the following tools to support rural broadband providers and policymakers:
 
-- [**`cori.data.fcc`**](https://ruralinnovation.github.io/cori.data.fcc/){.external target="_blank"}: `R` package that facilitates the discovery, analysis, and use of FCC public data releases.
+- [**`cori.data.fcc`**](https://ruralinnovation.github.io/cori.data.fcc/){.external target="_blank"}: R package that facilitates the discovery, analysis, retrieval and use of FCC public data releases.
+  - Because the FCC publishes major releases of this data twice a year and minor updates at a nearly biweekly cadence, we developed `cori.data.fcc` to ease the process of provisioning our various applications with the latest broadband coverage data.
 
-- [**`CORI Data API`**](https://cori-data-api.ruralinnovation.us/){.external target="_blank"}: [TODO] Introduce API and derivative apps...
+- [**`CORI Data API`**](https://cori-data-api.ruralinnovation.us/){.external target="_blank"}: This backend was designed and implemented to provide an assortment of broadband service metrics and demographic data at multiple geographic levels (county, tract, block, etc.)
+  - Built with AWS Lambda and RDS (PostgreSQL)
+  - Continuously deploys from code commits using AWS CDK
+  - This allowed us to build multiple frontend applications that incorporate a mix of backend data sources, including CORI Data API and Mapbox (styles and tile sets):
 
-  - [**Rural Broadband Map**](https://rural-broadband-map.ruralinnovation.us/){.external target="_blank"}: Visualizes broadband availability and funding data to identify gaps and opportunities.
+    - [**Rural Broadband Service Map**](https://rural-broadband-map.ruralinnovation.us/){.external target="_blank"}: Visualizes broadband availability and funding data to identify gaps and opportunities.
 
-  - [**Rural Broadband County Summary**](https://broadband-county-summary.ruralinnovation.us/){.external target="_blank"}: Summarizes broadband availability and funding data per county (name or FIPS).
+    - [**Rural Broadband County Summary**](https://broadband-county-summary.ruralinnovation.us/){.external target="_blank"}: Summarizes broadband availability and demographic data per county (by name or FIPS).
 
-  - [**Broadband Climate Risk Mitigation Tool**](https://broadband-risk.ruralinnovation.us/){.external target="_blank"}: Assesses climate risks posed to broadband infrastructure in order to enhance resiliency.
+    - [**Broadband Climate Risk Mitigation Tool**](https://broadband-risk.ruralinnovation.us/){.external target="_blank"}: Assesses climate risks posed to broadband infrastructure in order to enhance resiliency.
 
-Because the FCC publishes major releases of this data twice a year and minor updates at a nearly biweekly cadence, we developed an `R` package called `cori.data.fcc` to ...
 
 [TODO]: ... in describing the web apps, note that all are served by the [CORI Data API](https://cori-data-api.ruralinnovation.us/){.external target="_blank"} (which is provisioned by `cori.data.dcc`)
 
