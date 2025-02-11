@@ -105,6 +105,11 @@ On March 23, 2020, the Broadband Deployment Accuracy and Technological Availabil
 [^bfm_doc]: [https://us-fcc.app.box.com/v/bfm-data-downloads-output](https://us-fcc.app.box.com/v/bfm-data-downloads-output){.external target="_blank"}
 
 
+:::{.aside}
+In the legislation and sometimes on FCC documents the process of collecting this data is called [**B**roadband **D**ata **C**ollection (BDC)](https://www.fcc.gov/BroadbandData){.external target="_blank"}.
+:::
+
+
 #### National Broadband Map (NBM)
 
 The NBM offers detailed broadband availability information:
@@ -126,10 +131,6 @@ Every location is characterized by:
 
 ::: {.callout-tip}
 A location (see [What is a BSL?](#what-is-a-broadband-serviceable-location-bsl)) can be covered by multiple Internet Services Provides (ISP) with potentially different services and technologies. Hence, it can be represented in the data by many "rows".
-:::
-
-:::{.aside}
-Sometimes the process of collecting those two datasets is called **B**roadband **D**ata **C**ollection (BDC)
 :::
 
 
