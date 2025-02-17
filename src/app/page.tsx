@@ -16,6 +16,14 @@ export default function Home() {
             // { title: "Cinnamon Rolls", slug: "cinnamon_rolls" }, // => /content/recipes/cinnamon_rolls.html
             // { title: "Lemon Poppy Seed Muffins", slug: "lemon_poppy_seed_muffins" }, // => /content/recipes/lemon_poppy_seed_muffins.html
             {
+                title: "Democratizing analytics on FCC's (big) data",
+                content: "",
+                contentRoot: "content/posts",
+                slug: "cori-intro", // => /content/posts/cori-intro.html
+                date: new Date('2025-02-13'),
+                description: "The FCC’s public release of the National Broadband Map should, in theory, allow broadband providers to maximize their access to the unprecedented availability of public and private investment funding, but utilizing this data continues to pose challenges for rural service providers..."
+            },
+            {
                 title: "Three.js Portal Effect",
                 content: "",
                 contentRoot: "threejs-portal-effect",

@@ -40,7 +40,8 @@ next-env.d.ts
 *_cache/
 *_site/
 /content/*/data
-/content/posts/proj-fcc-report
+/content/posts/09_fcc-data/
+!/content/posts/09_fcc-data/index.qmd
 renv/
 venv/
 *.bak

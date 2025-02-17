@@ -1,0 +1,26 @@
+---
+title: "Democratizing analytics on FCC's (big) data"
+subtitle: "Accessing data about access to broadband"
+author:
+  - "John Hall"
+date: "2025-02-13"
+categories:
+  - access
+  - api
+  - civic
+  - innovation
+  - rural
+  - CORI
+  - spatial
+draft: false
+format:
+  gfm:
+    variant: +yaml_metadata_block
+---
+
+
+_The following article is about data and application development work that I contributed to in my role as a [Software Developer and DevOps Administrator](//content/dev#center-on-rural-innovation-br--rural-innovation-strategies-inc) at the Center on Rural Innovation._
+
+{{< include 09_fcc-data/index.qmd >}}
+
+<br />

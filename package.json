@@ -26,10 +26,11 @@
     "typescript": "^5"
   },
   "scripts": {
-    "dev": "npm run render:markdown && npm run dev:next",
-    "dev:next": "next dev",
     "build": "npm run render:markdown && npm run build:next",
     "build:next": "next build",
+    "clean": "rm -rf _freeze/* _site/*",
+    "dev": "npm run render:markdown && npm run dev:next",
+    "dev:next": "next dev",
     "start": "python -m http.server -d out 3000",
     "lint": "next lint",
     "next": "next",
