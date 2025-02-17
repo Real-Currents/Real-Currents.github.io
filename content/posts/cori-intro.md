@@ -3,7 +3,7 @@ title: Democratizing analytics on FCC's (big) data
 subtitle: Accessing data about access to broadband
 author:
   - John Hall
-date: '2025-01-01'
+date: '2025-02-13'
 categories:
   - access
   - api
@@ -21,7 +21,7 @@ format:
 
 The following article is about data and application development work
 that I contributed to in my role as a [Software Developer and DevOps
-Administrator](../../content/dev#center-on-rural-innovation-br--rural-innovation-strategies-inc)
+Administrator](/content/dev#center-on-rural-innovation-br--rural-innovation-strategies-inc)
 at the Center on Rural Innovation.
 
 The FCC’s public release of the National Broadband Map should, in
@@ -171,8 +171,7 @@ location to a Census Block (2020 vintage) or H3 hexagon.
 
 <div id="fig-broadbanddata">
 
-![](img/whats-on-the-national-broadband-map-113023-1.png)
-
+![](images/whats-on-the-national-broadband-map-113023-1.png)
 
 Figure 1: “What’s on the national broadband map” Source:
 <https://www.fcc.gov/BroadbandData>
@@ -213,8 +212,9 @@ States*”. The public data:
 The information is structured either at the scale of a specific project
 inside a program or for the whole program. Hence we have characteristics
 for each project, including their associated boundaries (territories
-covered) (see
-<https://ruralinnovation.github.io/proj-fcc-report/fcc_funding.html>).
+covered) (see <a
+href="https://ruralinnovation.github.io/proj-fcc-report/fcc_funding.html"
+class="external" target="_blank">FCC Funding Map</a>).
 
 ### What is a Broadband Serviceable Location (BSL)?
 
@@ -258,8 +258,9 @@ The FCC defines broadband access levels as follows:
 Served, Unserved and Underseved are **overlapping** categories at the
 **location level**. They can be extended at the “**area level**”.
 
-These definitions, rooted in the [FCC’s Broadband Speed
-Benchmark](https://www.fcc.gov/document/fcc-increases-broadband-speed-benchmark),
+These definitions, rooted in the <a
+href="https://www.fcc.gov/document/fcc-increases-broadband-speed-benchmark"
+class="external" target="_blank">FCC’s Broadband Speed Benchmark</a>,
 can be adapted by states to suit local conditions[^13].
 
 ## Tools for big broadband analytics
@@ -443,8 +444,11 @@ Copyright © 2025 Center On Rural Innovation
     class="external"
     target="_blank">https://us-fcc.app.box.com/v/bfm-data-downloads-output</a>
 
-[^12]: [“The Fabric
-    data”](https://help.bdc.fcc.gov/hc/en-us/articles/7412732399003-Fabric-FAQs)
+[^12]: <a
+    href="https://help.bdc.fcc.gov/hc/en-us/articles/7412732399003-Fabric-FAQs"
+    class="external" target="_blank">“The Fabric data”</a>
 
-[^13]: Page 4
-    [https://www.pewtrusts.org/-/media/assets/2023/06/un–and-underserved-definitions-ta-memo-pdf.pdf](https://www.pewtrusts.org/-/media/assets/2023/06/un--and-underserved-definitions-ta-memo-pdf.pdf)
+[^13]: Page 4 <a
+    href="https://www.pewtrusts.org/-/media/assets/2023/06/un--and-underserved-definitions-ta-memo-pdf.pdf"
+    class="external"
+    target="_blank">https://www.pewtrusts.org/-/media/assets/2023/06/un–and-underserved-definitions-ta-memo-pdf.pdf</a>

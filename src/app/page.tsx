@@ -20,7 +20,7 @@ export default function Home() {
                 content: "",
                 contentRoot: "content/posts",
                 slug: "cori-intro", // => /content/posts/cori-intro.html
-                date: new Date('2025-02-12'),
+                date: new Date('2025-02-13'),
                 description: "The FCC’s public release of the National Broadband Map should, in theory, allow broadband providers to maximize their access to the unprecedented availability of public and private investment funding, but utilizing this data continues to pose challenges for rural service providers..."
             },
             {
