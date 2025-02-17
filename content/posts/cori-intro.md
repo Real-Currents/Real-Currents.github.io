@@ -19,10 +19,10 @@ format:
 ---
 
 
-The following article is about data and application development work
+*The following article is about data and application development work
 that I contributed to in my role as a [Software Developer and DevOps
 Administrator](/content/dev#center-on-rural-innovation-br--rural-innovation-strategies-inc)
-at the Center on Rural Innovation.
+at the Center on Rural Innovation.*
 
 The FCC’s public release of the National Broadband Map should, in
 theory, allow broadband providers to maximize their access to the
