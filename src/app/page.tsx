@@ -29,7 +29,7 @@ export default function Home() {
                 contentRoot: "threejs-portal-effect",
                 slug: "", // => /threejs-portal-effect/index.html
                 date: new Date('2025-01-31'),
-                description: "Three.js - WebXR Portal Effect (a demo of how to use clipping planes to construct/project WebXR scene in a mixed reality  - through the portal!)"
+                description: "Three.js - WebXR Portal Effect (a demo of how to use clipping planes to construct/project WebXR scene in mixed reality  - through the portal!)"
             },
             {
                 title: "Visualizing R Data with SveltR",
