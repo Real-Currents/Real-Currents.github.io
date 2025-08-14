@@ -1,0 +1,24 @@
+---
+title: "Information architecture in the [Augmented|Virtual|eXtended] Reality Age"
+subtitle: "We can and must afford evolution"
+author:
+  - "John Hall"
+date: "2025-07-31"
+categories:
+  - AR
+  - VR
+  - XR
+  - information
+  - information experience design
+  - IxD
+draft: true
+format:
+  gfm:
+    variant: +yaml_metadata_block
+---
+
+History and reality are undergoing a remarkable reconfiguration of meaning...
+
+Let's talk about it!
+
+<br />
