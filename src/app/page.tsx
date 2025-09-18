@@ -24,6 +24,14 @@ export default function Home() {
                 description: "Demonstrating a practical boiler plate and usage of WebXR Layers with three.js"
             },
             {
+                title: "Information architecture in the [Augmented|Virtual|eXtended] Reality Age",
+                content: "",
+                contentRoot: "content/posts",
+                slug: "info-arch-in-avxr", // => /content/posts/info-arch-in-avxr.html
+                date: new Date('2025-09-11'),
+                description: "AR/VR/XR can actively create new shared sensory, emotional, and cognitive reference points that allow successful communication and collaboration..."
+            },
+            {
                 title: "Democratizing analytics on FCC's (big) data",
                 content: "",
                 contentRoot: "content/posts",
