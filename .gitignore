@@ -35,15 +35,27 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.R*
+# R files
+.Rproj
+.Rproj.user
+.Rhistory
+*.R*
+renv/
+venv/
+
+CLAUDE.md
+GEMINI.md
+
+/data
+/_targets
+*.csv
+*.xlsx
+
 /.quarto/
 *_cache/
 *_site/
-/content/*/data
-/content/posts/09_fcc-data/
-!/content/posts/09_fcc-data/index.qmd
-renv/
-venv/
+*.backup
 *.bak
+*.code-workspace
 *.idea
 *.html
