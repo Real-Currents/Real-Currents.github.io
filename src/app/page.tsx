@@ -16,6 +16,14 @@ export default function Home() {
             // { title: "Cinnamon Rolls", slug: "cinnamon_rolls" }, // => /content/recipes/cinnamon_rolls.html
             // { title: "Lemon Poppy Seed Muffins", slug: "lemon_poppy_seed_muffins" }, // => /content/recipes/lemon_poppy_seed_muffins.html
             {
+                title: "WebXR Layers Start!",
+                content: "",
+                contentRoot: "webxr-layers-start",
+                slug: "", // => /webxr-layers-start/index.html
+                date: new Date('2025-09-18'),
+                description: "Demonstrating a practical boiler plate and usage of WebXR Layers with three.js"
+            },
+            {
                 title: "Democratizing analytics on FCC's (big) data",
                 content: "",
                 contentRoot: "content/posts",
