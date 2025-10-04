@@ -24,6 +24,14 @@ export default function Home() {
                 description: "AR/VR/XR can actively create new shared sensory, emotional, and cognitive reference points that allow successful communication and collaboration..."
             },
             {
+                title: "WebXR Layers Start!",
+                content: "",
+                contentRoot: "webxr-layers-start",
+                slug: "", // => /webxr-layers-start/index.html
+                date: new Date('2025-09-18'),
+                description: "Demonstrating a practical boiler plate and usage of WebXR Layers with three.js"
+            },
+            {
                 title: "Democratizing analytics on FCC's (big) data",
                 content: "",
                 contentRoot: "content/posts",
