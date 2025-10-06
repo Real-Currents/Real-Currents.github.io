@@ -21,7 +21,7 @@ export default function Home() {
                 contentRoot: "content/posts",
                 slug: "info-arch-in-avxr", // => /content/posts/info-arch-in-avxr.html
                 date: new Date('2025-09-11'),
-                description: "AR/VR/XR can actively create new shared sensory, emotional, and cognitive reference points that allow successful communication and collaboration..."
+                description: "Reality-altering technology represents a fundamental shift from tools that augment human capabilities to technologies that reconstruct the very foundations of human experience and understanding..."
             },
             {
                 title: "WebXR Layers Start!",
@@ -45,7 +45,7 @@ export default function Home() {
                 contentRoot: "threejs-portal-effect",
                 slug: "", // => /threejs-portal-effect/index.html
                 date: new Date('2025-01-31'),
-                description: "Three.js - WebXR Portal Effect (a demo of how to use clipping planes to construct/project WebXR scene in mixed reality  - through the portal!)"
+                description: "A demo of how to use clipping planes to construct/project WebXR scenes in mixed reality  - through the portal!"
             },
             {
                 title: "Visualizing R Data with SveltR",

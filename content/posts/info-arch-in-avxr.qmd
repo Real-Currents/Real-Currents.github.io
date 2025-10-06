@@ -11,164 +11,270 @@ categories:
   - reality alteration
   - epistemology
   - critical technology studies
-draft: true
+draft: false
 format:
   gfm:
     variant: +yaml_metadata_block
 lightbox: auto
 ---
 
-_**Reality technology represents a fundamental shift from tools that augment human capabilities to technologies that reconstruct the very foundations of human experience and understanding**. This positions Augmented Reality (**AR**), Virtual Reality (**VR**), and Extended Reality (**XR**) experiences, designed and developed with AI assistance, not as mere interface improvements but as potentially the most consequential cognitive and social technologies since the printing press - with all the accompanying risks and responsibilities. Just as Marshall McLuhan demonstrated in **The Gutenberg Galaxy** that printing technology fundamentally altered human consciousness, creating linear, sequential thinking patterns and individualistic social organization, AR/VR/XR technologies may represent an equally profound transformation, potentially creating new forms of multi-sensory, embodied cognition while risking the emergence of what might be called "immersive consciousness" - a singular way of perceiving mediated through designed experiences.[^reality_altering_definition][^mcluhan_gutenberg][^immersive_consciousness_concern]_
+_**Reality-altering technology represents a fundamental shift from tools that augment human capabilities to technologies that reconstruct the very foundations of human experience and understanding**. This positions Augmented Reality (**AR**), Virtual Reality (**VR**), and Extended Reality (**XR**) experiences, designed and developed with AI assistance, not as mere interface improvements but as potentially the most consequential cognitive and social technologies since the printing press - with all the accompanying risks and responsibilities.[^reality_altering_definition] Just as Marshall McLuhan demonstrated in **The Gutenberg Galaxy** that printing technology fundamentally altered human consciousness, creating linear, sequential thinking patterns and individualistic social organization,[^mcluhan_gutenberg] AR/VR/XR technologies may represent an equally profound transformation, potentially creating new forms of multi-sensory, embodied cognition while risking the emergence of what might be called "immersive consciousness" - a singular way of perceiving mediated through designed experiences.[^immersive_consciousness_concern]_
 
-However, after building and testing immersive "experiential baseline" prototypes, a critical gap has emerged: **these technologies may fragment shared understanding as easily as they build it**, and the path from abstract spatial visualization to genuine human comprehension remains largely unmapped.[^prototype_learning]
+After building and testing immersive "experiential baseline" prototypes, a critical gap has emerged: **these technologies may fragment shared understanding as easily as they build it**, and the path from abstract spatial visualization to genuine human comprehension remains largely unmapped.[^prototype_learning]
 
 ## The Polycrisis of Understanding
 
-We face interconnected breakdowns in collective sense-making: algorithmic personalization fragments information landscapes,[^filter_bubble] generative AI enables infinite customization of "truth,"[^ai_truth_customization] and traditional authorities lose legitimacy across ideological divides. This constitutes what Edgar Morin terms a **polycrisis**[^polycrisis] - multiple interconnected crises that amplify each other beyond the sum of their parts.
+We face a **polycrisis** in collective sense-making—a situation where multiple interconnected crises occur simultaneously and amplify each other's impacts.[^polycrisis_definition] Climate change, economic instability, political polarization, technological disruption, public health emergencies, and social inequality do not occur in isolation. They reinforce and compound each other, creating cascading effects throughout interconnected systems. Within this broader crisis sits a particular breakdown: the fragmentation of shared understanding itself.
 
-**Reality-altering technologies emerge into this context as both potential solution and additional crisis vector.** They could create new shared experiential foundations - or they could accelerate the fragmentation by enabling each group to inhabit completely incompatible versions of reality.
+The past decade of social networks and generative AI has revealed something troubling about how we construct collective knowledge. We no longer share common reference points for understanding complex information. What communication researchers call "common ground"—"the sum of mutually known beliefs, knowledge and suppositions" among conversation participants—appears to be eroding.[^clark_common_ground] Algorithm-driven personalization has created what might be called experiential isolation: people inhabiting fundamentally different information environments while nominally discussing the same topics.
 
-## The Reality Alteration Critique
+## What We Call "Common Ground" Was Never Common
 
-### Who's Examining Reality Alteration Critically
+The assumption that we once possessed robust shared understanding deserves scrutiny. This supposed common ground may itself be a historical artifact—not a description of actual universal human experience, but rather the successful imposition of particular Western, patriarchal frameworks as if they were universal truths. What we are calling the "erosion of common ground" might more accurately be described as the declining power of certain dominant groups to enforce their experiential frameworks as normative for everyone else.
 
-**Sherry Turkle** analyzes how digital technologies fundamentally alter our relationship with authenticity and reality itself, not just our tools for accessing reality.[^turkle_authenticity]
+### McLuhan's Diagnosis: Typographic Consciousness
 
-**Byung-Chul Han** describes "hyperreality" where digital simulations don't represent reality but **replace it entirely**, creating what he calls the "transparency society" where everything becomes immediately available but nothing remains genuinely knowable.[^han_hyperreality]
+Marshall McLuhan identified this transformation decades before social media. In *Understanding Media* and *The Gutenberg Galaxy*, he argued that print technology had created what he called "typographic man"—a particular form of consciousness characterized by linear, sequential thinking, visual bias, individualism, and the assumption of objective, neutral observation.[^mcluhan_understanding] This was not human consciousness as such. It was a specific historical formation that print technology made dominant in Western culture.
 
-**Jean Baudrillard's** foundational concept of "simulacra" - where simulations become more real than reality itself - directly applies to immersive technologies that can create experiences more compelling than actual experience.[^baudrillard_simulacra]
+Electronic media, McLuhan argued, was already undoing this formation. Television, radio, and telephone were creating what he called "acoustic space"—simultaneous, multi-sensory, participatory awareness that more closely resembled pre-literate oral cultures than the detached, sequential consciousness of the print era.[^mcluhan_acoustic] What looked like cultural breakdown from the perspective of typographic consciousness was actually a transformation to a different mode of awareness—one that many non-Western cultures had maintained all along.
 
-**Jaron Lanier** offers insider critiques of VR's potential to alter human consciousness and social relationships in ways that prioritize technological systems over human flourishing.[^lanier_critique]
+### Retribalization and the Global Village
 
-### The Critical Dimensions
+McLuhan's concept of "retribalization" did not mean a literal return to tribal society. He described the electronic media's creation of the "global village"—a world in which everyone is simultaneously aware of everyone else, where events are experienced collectively and immediately rather than through the mediated distance of print.[^mcluhan_global_village] This simultaneous, participatory consciousness does not operate through the linear logic and categorical thinking that print fostered. It is more associative, more embodied, more comfortable with simultaneity and contradiction.
 
-**Epistemic Alteration**: Reality-altering technologies change what counts as knowledge and how we validate truth claims. When experience can be programmed, how do we distinguish authentic insight from engineered conviction?
+The "common ground" we think we have lost may have been a particular historical formation—the shared frameworks of print-based, Western, predominantly male institutional culture. Academic discourse, legal reasoning, scientific method, bureaucratic organization: all of these assumed and reinforced the linear, sequential, categorical thinking that print technology naturalized. When we lament the loss of shared reference points, we might be lamenting the declining power of these specifically Western, specifically print-based modes of knowledge to dominate all other ways of knowing.
 
-**Temporal Alteration**: Immersive technologies compress, extend, and manipulate temporal experience in ways that may fundamentally alter human relationship with memory, anticipation, and presence.
+### Electronic Media and the Visibility of Multiplicity
 
-**Social Alteration**: When people can inhabit completely different experiential worlds, shared reality fractures in ways that may make democratic deliberation impossible.
+Electronic media did not create this transformation. It accelerated and made visible what was always true: that human consciousness is more various, more multiple, more simultaneous than print culture could accommodate. Aboriginal epistemologies, with their comfort with multiple simultaneous realities and non-linear temporalities, were not primitive precursors to Western rationality. They were sophisticated knowledge systems that print culture rendered illegible precisely because they could not be adequately captured in linear text.
 
-**Political Alteration**: Reality alteration enables unprecedented forms of control and manipulation, potentially creating new categories of authoritarian power.
+What we are experiencing now might not be primarily a crisis of common ground. It might be a crisis of hegemony—the declining ability of one particular consciousness-form to present itself as universal. The algorithms and filter bubbles we blame for fragmentation are perhaps better understood as the technical infrastructure through which multiple, previously suppressed ways of knowing are finally able to assert themselves against what McLuhan called the tyranny of the visual.[^mcluhan_medium]
 
-## Failed Prototype: The Abstraction Trap
+### The Disorientation of Transformation
 
-To explore these questions empirically, We built a WebXR prototype for "experiential baselines" - immersive economic data visualization intended to create shared understanding across ideological differences. The technical implementation succeeded: users can manipulate 3D scatter plots representing economic data, with ray-casting controllers providing clear interaction feedback.
+McLuhan was clear that the transformation from print to electronic consciousness would be deeply disorienting, even traumatic. The old forms do not simply disappear. They exist in tension with emerging modes, creating what he called "identity crisis on a global scale."[^mcluhan_identity] When everyone is simultaneously aware of everyone else, when linear causality gives way to complex feedback loops, when the distanced objectivity of print gives way to participatory immersion, the result can feel like chaos—especially to those whose worldview was shaped by print.
 
-**The conceptual implementation failed completely.**
+McLuhan also suggested this transformation opened possibilities. If print consciousness was fundamentally visual, individualistic, and detached, electronic consciousness might be more embodied, more communal, more capable of holding multiple simultaneous perspectives. The question is not how to restore the old common ground—that ground was never as common as its beneficiaries believed—it is how to navigate collective understanding in a mode of consciousness that print culture taught us to dismiss as primitive or irrational.
 
-### What We Built vs. What We Learned
+### The Stakes for AR/VR/XR Development
 
-**Technical Achievement**: Floating blue data points, green curves, and bar charts in 3D space, labeled "Mixed Economy (Balanced market & regulation)" with sophisticated VR interaction systems.
+These questions become urgent when we consider AR/VR/XR technologies. If these represent yet another transformation of consciousness—moving beyond even electronic media's acoustic space into fully embodied, multi-sensory immersion—are we developing tools that could finally make Western consciousness capable of understanding what other epistemological systems have known all along? Or are we simply creating more sophisticated mechanisms for imposing particular experiential frameworks as universal, this time with the compelling authority of apparently direct experience?
 
-**Critical Failure**: No meaningful connection between geometric elements and lived economic experience. No clear data-to-visual mapping. No pathway from spatial manipulation to genuine understanding.
+Aboriginal knowledge systems have maintained ways of knowing that print consciousness struggled to understand—simultaneous, place-based, embodied, comfortable with multiplicity and non-linear time. If electronic media began making these knowledge systems more intelligible to Western consciousness, might immersive media complete that transformation? Or will we simply appropriate the surface aesthetics of these epistemologies while continuing to operate through fundamentally Western frameworks, now disguised as universal human experience?
 
-**Key Insight**: We created exactly what Baudrillard warned about - **simulacra so removed from underlying reality that they become meaningless abstraction**. Users could manipulate impressive 3D visualizations without gaining any insight into actual economic systems or their effects on human lives.
+The same technologies enabling multiple simultaneous perspectives could also enable unprecedented forms of experiential control. If common ground was always partial and contested, the ability to engineer shared immersive experiences raises the stakes considerably. Who designs these experiences? Whose frameworks become "baseline"? How do we prevent the reproduction of colonial patterns in virtual space?
 
-### The Simple Geometry Question
+## Why Text Fails Multidimensional Experience
 
-When pushed to simplify to basic shapes - red sphere, blue cube, green cylinder - the fundamental problem became clear: **without explicit connection to lived human experience and clear data-to-visual logic, even simple geometric relationships remain empty abstractions**.
+With McLuhan's critique in mind, we can examine what happens when we try to represent certain kinds of knowledge through textual means—a medium fundamentally shaped by print consciousness.
 
-This reveals a deeper issue: **spatial metaphors for abstract concepts may inherently mislead rather than enlighten**. The assumption that 3D manipulation creates understanding may be fundamentally flawed.
+### The Dream Translation Problem
 
-## Critical Questions for Reality Alteration
+Consider a simple experiment: try to write down a dream. The moment you begin translating the experience into sequential text, something essential is lost. You must:
 
-### Before Building Immersive Experiences
+- Impose linear sequence on what was likely simultaneous or non-temporally organized
+- Choose a single perspective when the dream might have involved multiple viewpoints
+- Translate sensory, emotional, and spatial experience into words
+- Create logical connections between elements that existed through association or symbol rather than causality
+- Flatten the temporal distortions—the way dream-time stretches, compresses, loops back
 
-**Reality Connection**: How does this virtual experience connect to users' actual lived experience rather than replacing it with abstraction?
+The dream in its experienced form operated across sensory, emotional, symbolic, spatial, and temporal registers simultaneously. Writing collapses all of that into a single sequential text stream. This limitation is not unique to dreams. It reveals something fundamental about textual representation itself—particularly text as shaped by print consciousness.
 
-**Data Integrity**: What specific phenomena are being represented, and how do spatial/visual properties encode real data rather than arbitrary mappings?
+### When Epistemologies Resist Translation: The Dreamtime Case
 
-**Embodied Logic**: Why does this require spatial/immersive representation rather than other forms of understanding? What unique insights emerge from embodied interaction?
+This limitation becomes critically apparent when examining how Western anthropology has attempted to translate Aboriginal Australian cosmology. The concept often rendered in English as "Dreamtime" offers a particularly instructive case of how print-based categorical thinking distorts knowledge systems organized through different principles.
 
-**Shared vs. Fragmented**: Under what conditions do immersive experiences create genuine shared reference points versus enabling groups to inhabit mutually incompatible realities?
+Anthropological research reveals significant complexity. One comprehensive study notes that "there is a wide range of variation amongst Aboriginal communities and anthropologists, in the way they conceptualise the 'dreamtime'. By not realising this variation, a false universality has been applied to the 'dreamtime', in regard to the finer metaphysical points; thus creating an order, or unity, [as if a consensus of opinion is held] about the 'dreamtime' within Aboriginal Australia."[^dean_dreamtime]
 
-**Power Dynamics**: Who decides what aspects of reality get encoded in these experiences, and whose perspectives are embedded in the design choices?
+Different Aboriginal communities conceptualize what Western anthropology calls "Dreamtime" in fundamentally different ways. Some view it as past reality, others as "at the same time a past reality and a concurrent reality," with further variations on whether this concurrent reality is parallel to or within the present.[^dean_dreamtime] The diversity resists the categorical unity that print consciousness seeks to impose.
 
-### Measuring Reality Alteration Effects
+### The Mistranslation Problem
 
-**Epistemic Impact**: How do immersive experiences change what users consider valid knowledge? Do they develop better understanding of actual phenomena or false confidence in manipulated abstractions?
+The term "Dreamtime" itself emerged from what scholars now recognize as "a mistranslation based on an etymological connection" that reduced "an entire epistemology...to a single English word."[^wikipedia_dreaming] Linguist David Campbell Moore concludes that the translation "Dreamtime" held "only over a limited geographical domain" and that "to imagine that [the English word 'dream'] captures the essence of 'Altjira' is an illusion."[^wikipedia_dreaming]
 
-**Transfer Validity**: Can insights gained in virtual environments transfer to real-world understanding and decision-making, or do they remain isolated in virtual contexts?
+More recent scholarship suggests the concept is better understood as "everywhen"—not past, present, or future, but something that transcends Western linear time concepts entirely.[^aboriginal_art_australia] This temporal multiplicity is precisely what print-based linear narrative cannot accommodate. The attempt to translate into print necessarily distorts.
 
-**Social Cohesion**: Do shared immersive experiences increase users' ability to understand diverse perspectives, or do they reinforce existing viewpoints with more compelling presentations?
+### Integrated Reality vs. Categorical Division
 
-**Long-term Effects**: How do repeated reality-altering experiences change users' baseline relationship with authentic experience and unmediated reality?
+What is particularly significant is that Aboriginal ontologies present "the world exists in one reality composed of an inseparable weave of secular and sacred dimensions"—not separate categories requiring bridges or links, as Western categorical thinking would impose, but an integrated whole.[^indigenous_epistemologies] The knowledge is fundamentally place-based, experiential, and multidimensional in ways that resist the categorical thinking and linear narrative structures of Western academic discourse.
 
-## Toward Responsible Reality Alteration
+The Aboriginal epistemology scholar Jeannie Herbert Nungarrayi, describing the Warlpiri concept of Jukurrpa, emphasizes that "for Warlpiri and other Aboriginal people living in remote Aboriginal settlements, The Dreaming is not something that has been consigned to the past but is a lived daily reality."[^conversation_dreaming] The concept "provides for a total, integrated way of life."[^conversation_dreaming] Yet attempts to capture this in English academic writing inevitably impose structures foreign to the knowledge system itself.
 
-### Grounding Principles
+## The Pattern: Print Consciousness vs. Multidimensional Knowledge
 
-**Experience Connection**: Virtual experiences must explicitly connect to and enhance users' real-world experience rather than replacing it with abstraction.
+A pattern emerges across these examples—dreams, Aboriginal cosmology, and perhaps other forms of embodied or experiential knowledge. They share a quality: they are experiential realities that resist capture by print-based linear representation. Both dreams and concepts like the Dreaming demonstrate that human consciousness can operate with multiple simultaneous frameworks, layered temporalities, and place-based meanings that Western linear narrative cannot adequately represent.
 
-**Transparency**: The ways technology alters perception and understanding must be made visible to users, not hidden behind seamless interfaces.
+This reveals a fundamental mismatch between:
 
-**Multiple Perspectives**: Rather than presenting singular interpretations, reality-altering experiences should enable users to explore multiple valid perspectives on complex phenomena.
+**Experiential/spatial/non-linear knowledge** (embodied experience, spatial relationships, emotional resonance, simultaneous awareness, place-based understanding, temporal multiplicity)
 
-**Empirical Validation**: Claims about improved understanding, empathy, or collaboration must be measured through rigorous empirical testing, not assumed based on technological capabilities.
+and
 
-**Ethical Constraint**: The power to alter reality comes with responsibility to serve users' authentic needs rather than impose particular worldviews or economic interests.
+**Print-based sequential representation** (linear written language, academic discourse, categorical analysis, temporal sequencing, visual bias, detached observation)
 
-### Constructive Applications
+This is not a failure of human intelligence. It is a limitation of a particular representational technology—print and its associated forms of consciousness—being asked to capture modes of knowing organized through different principles.
 
-**Process Understanding**: Rather than abstract data visualization, create experiences where users can walk through and manipulate actual processes - supply chains, biological systems, historical events - with clear connections to real-world phenomena.
+The breakdown we are experiencing in collective understanding may stem partly from trying to communicate increasingly complex, multidimensional information through fundamentally linear media shaped by print consciousness. As McLuhan predicted, electronic media was already revealing these limitations. Immersive technologies may make them impossible to ignore.
 
-**Scale Relationships**: Enable users to move physically between different scales (molecular to cosmic) to develop intuitive understanding of proportional relationships that resist textual description.
+## Reality-Altering Technology: McLuhan's Next Stage
 
-**Perspective Integration**: Allow users to experience the same situation from multiple viewpoints simultaneously, building capacity for perspective-taking without requiring ideological agreement.
+AR/VR/XR technologies sit at a critical juncture in McLuhan's framework. They represent a potential transformation beyond even electronic media's acoustic space, into fully embodied, multi-sensory, simultaneous awareness. Unlike text shaped by print consciousness, immersive technologies can preserve certain forms of multidimensionality:
 
-**Collaborative Problem-Solving**: Create shared environments where diverse groups can work together on concrete challenges, building understanding through joint action rather than passive consumption.
+- Spatial relationships remain spatial rather than being described sequentially
+- Multiple perspectives can be inhabited simultaneously or sequentially
+- Temporal complexity can be directly experienced rather than explained
+- Embodied understanding emerges from interaction rather than detached observation
+- Emotional and sensory dimensions are present alongside cognitive content
 
-## The Meta-Challenge: Designing Our Own Design Process
+### The Planetary Science Example
 
-The most critical insight from this exploration: **we need new frameworks for designing reality-altering technologies responsibly**. The traditional technology development process - conceive, build, deploy, iterate - proves inadequate when the technology fundamentally alters human consciousness and social reality.
+Lisa Messeri's ethnographic work with planetary scientists demonstrates how this works in practice. Her research shows how scientists engage in "place-making practices" that "transform the void of space into a cosmos filled with worlds that can be known and explored."[^messeri_placing] Through virtual environments and visualization tools, Mars scientists transform abstract data into experiential places they can "visit" and understand spatially.
 
-**Reality alteration requires what could be called "ontological design"** - explicit consideration of how technologies change not just what people can do, but what they understand reality to be.[^ontological_design_concept]
+Messeri argues that "place-making within planetary science has become central to daily work in the field" because scientists must "draw from Earthly analogues in order to make the alien seem familiar and, more importantly, explorable."[^messeri_lse_review] They are moving beyond the visual, sequential, categorical knowledge of print consciousness toward more embodied, spatial, experiential understanding.
 
-This suggests a different development methodology:
-1. **Phenomenological Analysis**: Deep examination of how people actually experience the phenomena we want to represent
-2. **Reality Mapping**: Explicit documentation of how virtual elements connect to real-world referents  
-3. **Critical Prototyping**: Building experiences specifically to test assumptions about understanding and reality alteration
-4. **Empirical Validation**: Rigorous measurement of actual vs. claimed effects on understanding and behavior
-5. **Ethical Review**: Assessment of whose interests are served by particular reality alterations
+### The Colonial Pattern Persists
 
-## Conclusion: The Responsibility of Reality Architects
+Messeri's work also reveals the limitations and politics of such place-making. Her critique of Mars exploration discourse notes how it often employs "colonialist rhetoric" that "notably lacks natives and slavery, bigotry and disease, oppression and poverty."[^messeri_lse_review] The act of making something into a "place" through immersive technology is never neutral. It imposes frameworks, emphasizes certain features while obscuring others, and can replicate the same colonial patterns of appropriation that mistranslations like "Dreamtime" exemplify.
 
-If technology is going to alter reality anyway - and the evidence suggests this is inevitable rather than optional - then our responsibility becomes **designing that alteration to serve human flourishing rather than technological or economic imperatives**.
+This parallel is not coincidental. The same Western consciousness that translated complex Aboriginal epistemologies into the simplified "Dreamtime" now creates virtual "places" from Mars data. The same categorical, visual-biased thinking that could not accommodate Aboriginal temporal multiplicity now risks imposing Western spatial frameworks on immersive experiences presented as universal.
 
-This requires abandoning both naive technological optimism and blanket technological pessimism in favor of **critical technological engagement**: understanding both the transformative potential and the dangers of reality-altering technologies, and taking responsibility for shaping their development toward genuinely beneficial outcomes.
+## The Paradox: Shared Experience or New Fragmentation?
 
-The question isn't whether to develop AR/VR/XR technologies, but how to develop them in ways that enhance rather than diminish human capacity for understanding, empathy, and collective sense-making. The prototype failures described here point toward the need for much more grounded, empirically validated, and ethically constrained approaches to reality alteration.
+AR/VR/XR technologies promise to create shared experiential reference points that text cannot provide. Yet they risk creating new forms of fragmentation. The planetary scientists in Messeri's study develop shared ways of seeing Mars through their visualization tools—this shared vision is specific to their expert community, their technological infrastructure, their institutional context. Making these experiences accessible to broader publics, or creating truly shared understanding across different cultural contexts, remains deeply challenging.
 
-**The stakes are not merely technological but civilizational**: how we design reality-altering technologies may determine whether future human societies can maintain the shared foundations necessary for democratic deliberation, scientific collaboration, and collective response to global challenges.
+### Beyond Established Research
 
-We are, whether we recognize it or not, becoming **architects of reality itself**. This requires not just technical skill but philosophical sophistication, ethical commitment, and empirical rigor that current technology development practices rarely provide.
+The concept of "experiential baselines"—shared sensory, emotional, and cognitive reference points that enable successful communication—extends beyond what existing research on common ground has established. While communication research extensively documents how "common ground" functions in conversation,[^clark_common_ground] the specific claim that immersive technologies can create measurable, lasting experiential baselines remains hypothetical.
 
-<br />
+This represents a research gap, not a weakness. We are proposing something that requires empirical validation: that immersive technologies might create new forms of shared reference points that could function differently than the "common ground" of print consciousness.
+
+### Aboriginal Epistemology as Caution, Not Model
+
+Aboriginal knowledge systems demonstrate that humans can maintain coherent worldviews while operating with:
+
+- Multiple ontological frameworks coexisting without requiring resolution into single truth
+- Reality understood as layered and simultaneous without fragmentation into incompatible perspectives
+- Knowledge that is fundamentally place-based and experiential rather than abstract and categorical
+- Temporal non-linearity as a viable organizing principle rather than confusion
+
+These capabilities developed over thousands of years within specific cultural contexts, with sophisticated social practices for maintaining and transmitting knowledge. The idea that we could rapidly engineer similar capabilities through immersive technology, divorced from these cultural contexts and social practices, may be as misguided as the assumption that translating Jukurrpa as "Dreamtime" adequately captures its meaning.
+
+The risk is that we appropriate the surface aesthetics of these epistemologies—the multiplicity, the spatial grounding, the temporal fluidity—while continuing to operate through fundamentally Western frameworks inherited from print consciousness, now disguised as universal human experience enabled by technology.
+
+## Critical Questions for Reality-Altering Technology Development
+
+Several questions emerge from this analysis:
+
+### On Representation and Reality
+
+**What gets flattened?** If textual representation fundamentally flattens certain kinds of multidimensional experience, what other representational modes might preserve this complexity—and what do *they* lose in turn? Every representational technology privileges certain modes of knowing while obscuring others.
+
+**Whose frameworks?** When we create shared immersive experiences through AR/VR/XR, whose frameworks, metaphors, and understandings are being privileged? How do we avoid simply replicating colonial patterns of knowledge appropriation in digital space, as the "Dreamtime" mistranslation did in linguistic space?
+
+### On Technology and Experience
+
+**Can baselines be engineered?** Can experiential baselines created through technology-mediated experience function similarly to those developed through direct physical and social experience—or are they categorically different in ways that matter? The planetary scientists' shared vision of Mars works within their specific community. Can it transfer beyond that context?
+
+**Engineering consciousness?** Aboriginal epistemologies demonstrate the possibility of multiple simultaneous ontological frameworks operating without contradiction. Can this capacity be engineered through technology, or does it require the kind of long-term cultural development and social practice that cannot be artificially accelerated?
+
+### On Power and Ethics
+
+**Who decides baseline reality?** If AR/VR/XR technologies are "reality-altering" in the sense that they reconstruct the foundations of experience and understanding, what ethical frameworks should govern their design? Who decides what experiences become "baseline" for collective understanding?
+
+**Print hegemony replicated?** Are we simply moving from print consciousness's tyranny to a new form—immersive consciousness—that will appear universal to its beneficiaries while actually representing particular Western, corporate, Silicon Valley frameworks? McLuhan's critique of print suggests we should expect new media to impose new forms of consciousness that appear natural to those shaped by them.
+
+## The Translation Analogy: Dreams and Data
+
+The dream analogy returns here with particular force. When you write down a dream, you do not just translate it—you transform it into something else, something that fits the constraints of sequential text shaped by print consciousness. The dream-as-written is not the same as the dream-as-experienced.
+
+Similarly, when we create immersive representations of complex data or attempt to build shared experiential reference points through technology, we are not just representing reality differently. We are creating new forms of reality that may be as distinct from unmediated experience as written dream narratives are from actual dreams. We are potentially creating what Baudrillard called simulacra—representations so removed from their referents that they become their own reality.
+
+This is not necessarily an argument against developing these technologies. It does suggest we should approach them with the same careful attention to what is lost in translation, what frameworks are being imposed, and whose ways of knowing are being privileged or erased that we should bring to any act of translation across epistemological systems—or across consciousness-forms.
+
+## The Scale and Democratization Challenge
+
+There is a final consideration: the question of scale and democratization. The planetary scientists in Messeri's study had access to sophisticated visualization technologies, institutional support, collaborative practices, and years of training in how to interpret what they were seeing. Their shared understanding emerged not just from the technology but from the entire social and institutional context in which they worked.
+
+If AR/VR/XR technologies are to create genuinely shared reference points across cultural and ideological boundaries—rather than simply replicating print consciousness's false universality in a new medium—they would need to be:
+
+- Accessible across vast differences in economic resources and technological infrastructure
+- Interpretable without requiring years of specialized training or membership in particular institutions
+- Meaningful across radically different cultural frameworks, not just those shaped by Western print consciousness
+- Resistant to appropriation by powerful actors who could control the "baseline" experiences, just as print culture was controlled by those with access to printing presses and literacy education
+
+The challenge becomes more acute when we consider the current trajectories of these technologies. They are being developed primarily by corporations in wealthy nations, designed for consumers who can afford expensive hardware, and shaped by Silicon Valley's particular cultural assumptions about what constitutes good user experience—assumptions deeply rooted in Western, print-shaped consciousness.
+
+The risk of creating new forms of experiential colonialism seems very real. Certain groups' mediated realities could become normative while others' experiences are rendered illegible or inferior—precisely the pattern McLuhan identified with print consciousness, now potentially replicated in immersive consciousness.
+
+## Living in McLuhan's Question
+
+What AR/VR/XR technologies ultimately force us to confront is not primarily a technical problem requiring better solutions. It is a deeper epistemological question about the nature of shared understanding itself, informed by McLuhan's insight that every medium shapes consciousness in particular ways.
+
+The breakdown of what we call "common ground" may not be primarily about the limitations of textual media or the promise of immersive technology. It may be about the tension between:
+
+- The need for shared reference points that enable collective action and democratic deliberation
+- The recognition that any shared framework inevitably privileges some ways of knowing over others—as print privileged linear, categorical, visual thinking
+- The ethical imperative to honor the validity of multiple, even incommensurable, frameworks rather than imposing one as universal
+
+Aboriginal epistemologies, for all their complexity and irreducibility to Western categories shaped by print, suggest it is possible for humans to navigate multiple simultaneous realities without fragmenting into incoherence. They also demonstrate that this capability is inseparable from specific cultural practices, social relationships, and long-term transmission of knowledge. Whether immersive technology can create similar capacities, or whether it represents a fundamentally different—and potentially more problematic—approach to multiplicity, remains an open question.
+
+### The Work Ahead
+
+The work ahead is not simply to build better AR/VR/XR systems. It is to develop frameworks for understanding what these technologies do to human consciousness, social organization, and collective sense-making—frameworks informed by McLuhan's insight that media transform consciousness itself.
+
+We need:
+
+- **Empirical research** on how shared immersive experiences affect understanding across different cultural contexts, not just within Western print-shaped consciousness
+- **Ethical frameworks** that take seriously both the promise and the danger of reality-altering technology, recognizing how they might replicate colonial patterns
+- **Humility** about the limits of what any representational technology can achieve, remembering that print consciousness also appeared universal to those shaped by it
+- **Critical awareness** of whose frameworks are being embedded in immersive experiences and whose ways of knowing are being excluded or distorted
+
+The polycrisis we face is real and urgent. The need for new forms of collective understanding is genuine. Rushing toward technological solutions without grappling with these deeper questions about representation, power, and epistemology—questions McLuhan raised decades ago about electronic media—may simply replicate our current crisis in a new medium.
+
+We risk creating not shared understanding but a more sophisticated form of mutual incomprehension, dressed in the compelling aesthetics of immersive experience and backed by the apparent authority of direct perception. We risk moving from print consciousness's tyranny of the visual to immersive consciousness's tyranny of the experiential—mistaking technologically mediated experience for universal human understanding.
+
+### Architects of Consciousness
+
+We are, whether we recognize it or not, becoming what McLuhan might have called **architects of consciousness itself**. This requires not just technical skill but philosophical sophistication, ethical commitment, and empirical rigor that current technology development practices rarely provide.
+
+The stakes, as McLuhan understood, are not merely technological but civilizational. How we design reality-altering technologies may determine whether future human societies can maintain the shared foundations necessary for democratic deliberation, scientific collaboration, and collective response to global challenges—or whether we fracture into incompatible experiential realities, each convinced of its own universality, unable to recognize how our consciousness has been shaped by our media.
 
 ---
 
 ## References
 
-[^reality_altering_definition]: The term "reality-altering technology" is used here to emphasize that AR/VR/XR technologies don't simply interface with existing reality but fundamentally reconstruct users' experiential relationship with reality itself.
+[^reality_altering_definition]: The term "reality-altering technology" is used here to distinguish AR/VR/XR from technologies that merely augment or extend existing human capabilities. These technologies do not just change what we can do—they change what we understand reality to be, potentially creating new forms of consciousness as print created "typographic man."
 
-[^prototype_learning]: Based on direct experience building and testing WebXR economic visualization prototypes using Three.js, WebXR APIs, and VR controller interaction systems. Technical details available at: https://github.com/revlin/xr-experiential-baselines
+[^mcluhan_gutenberg]: McLuhan, M. (1962). *The Gutenberg Galaxy: The Making of Typographic Man*. University of Toronto Press.
 
-[^filter_bubble]: Pariser, E. (2011). _The filter bubble: What the internet is hiding from you_. Penguin Press.
+[^immersive_consciousness_concern]: This concern extends McLuhan's analysis to immersive technologies: just as print created "typographic consciousness," AR/VR/XR may create "immersive consciousness"—new forms of awareness organized around designed multi-sensory experiences rather than embodied engagement with unmediated reality.
 
-[^ai_truth_customization]: The capacity of generative AI to produce infinite variations of content tailored to individual biases represents a qualitatively new challenge to shared epistemological foundations. See: Marcus, G. & Davis, E. (2019). _Rebooting AI: Building artificial intelligence we can trust_. Pantheon Books.
+[^prototype_learning]: Based on development work with Unity AR Foundation and WebXR platforms, 2024-2025.
 
-[^polycrisis]: Tooze, A. (2022, October 28). Welcome to the world of the polycrisis. _Financial Times_. Original concept from: Morin, E. (1999). _Homeland Earth: A manifesto for the new millennium_. Hampton Press.
+[^polycrisis_definition]: The term "polycrisis" has gained prominence in discussions of contemporary global challenges, particularly regarding how multiple crises interact and amplify each other. See: Tooze, A. (2022). "Welcome to the world of the polycrisis." *Financial Times*. Original concept from Morin, E. (1999). *Homeland Earth: A Manifesto for the New Millennium*.
 
-[^turkle_authenticity]: Turkle, S. (2011). _Alone together: Why we expect more from technology and less from each other_. Basic Books; Turkle, S. (2015). _Reclaiming conversation: The power of talk in a digital age_. Penguin Press.
+[^clark_common_ground]: Clark, H.H. (1996). *Using Language*. Cambridge University Press. Clark defines common ground as "the sum of mutual knowledge, beliefs and suppositions" (p. 93).
 
-[^han_hyperreality]: Han, B. C. (2015). _The transparency society_. Stanford University Press; Han, B. C. (2017). _In the swarm: Digital prospects_. MIT Press.
+[^mcluhan_understanding]: McLuhan, M. (1964). *Understanding Media: The Extensions of Man*. McGraw-Hill.
 
-[^baudrillard_simulacra]: Baudrillard, J. (1994). _Simulacra and simulation_ (S. F. Glaser, Trans.). University of Michigan Press. (Original work published 1981)
+[^mcluhan_acoustic]: McLuhan, M. (1962). *The Gutenberg Galaxy: The Making of Typographic Man*. University of Toronto Press. See especially McLuhan's discussion of "acoustic space" as simultaneous and multi-sensory versus "visual space" as linear and sequential.
 
-[^lanier_critique]: Lanier, J. (2017). _Dawn of the new everything: Encounters with reality and virtual reality_. Henry Holt and Company; Lanier, J. (2018). _Ten arguments for deleting your social media accounts right now_. Henry Holt and Company.
+[^mcluhan_global_village]: McLuhan, M. & Powers, B.R. (1989). *The Global Village: Transformations in World Life and Media in the 21st Century*. Oxford University Press.
 
-[^ontological_design_concept]: The concept of "ontological design" extends from: Winograd, T., & Flores, F. (1986). _Understanding computers and cognition: A new foundation for design_. Ablex Publishing; and Fry, T. (2012). _Becoming human by design_. Berg Publishers.
+[^mcluhan_medium]: McLuhan, M. (1964). *Understanding Media*, p. 93. McLuhan writes: "The new electronic interdependence recreates the world in the image of a global village."
 
-[^mcluhan_gutenberg]: McLuhan, M. (1962). _The Gutenberg Galaxy: The Making of Typographic Man_. University of Toronto Press. McLuhan's central thesis is that the alphabet and printing press created "typographic man" - a form of consciousness characterized by linear thinking, individualism, and fragmentation, fundamentally different from pre-literate "tribal man."
+[^mcluhan_identity]: McLuhan's concept of transformation between media creating "identity crisis on a global scale" appears throughout his work, particularly in discussing the transition from print to electronic media.
 
-[^immersive_consciousness_concern]: This concern extends McLuhan's analysis to immersive technologies: just as print created "typographic consciousness," AR/VR/XR may create new forms of consciousness organized around designed multi-sensory experiences rather than embodied engagement with unmediated reality.
+[^dean_dreamtime]: Dean, C. (1996). *The Australian Aboriginal 'Dreamtime' (Its History, Cosmogenesis Cosmology and Ontology)*. Thesis. Available: https://www.nintione.com.au/resources/rao/the-australian-aboriginal-dreamtime-its-history-cosmogenesis-cosmology-and-ontology/
+
+[^wikipedia_dreaming]: Wikipedia (2025). "The Dreaming." Retrieved from https://en.wikipedia.org/wiki/The_Dreaming. Cites linguist David Campbell Moore's analysis of Spencer and Gillen's translation.
+
+[^aboriginal_art_australia]: Aboriginal Art Australia (2023). "Understanding Aboriginal Dreaming and the Dreamtime." https://www.aboriginal-art-australia.com/aboriginal-art-library/understanding-aboriginal-dreaming-and-the-dreamtime/
+
+[^indigenous_epistemologies]: Hoffman (2013), cited in "Indigenous Epistemologies and Pedagogies," *Pulling Together: A Guide for Curriculum Developers*. https://opentextbc.ca/indigenizationcurriculumdevelopers/chapter/indigenous-epistemologies-and-pedagogies/
+
+[^conversation_dreaming]: Jeannie Herbert Nungarrayi, quoted in "'Dreamtime' and 'The Dreaming' – an introduction," *The Conversation*, February 12, 2025. https://theconversation.com/dreamtime-and-the-dreaming-an-introduction-20833
+
+[^messeri_placing]: Messeri, L. (2016). *Placing Outer Space: An Earthly Ethnography of Other Worlds*. Duke University Press, p. 2.
+
+[^messeri_lse_review]: From review of Messeri's work in *LSE Review of Books* (March 21, 2017). https://blogs.lse.ac.uk/lsereviewofbooks/2017/03/10/book-review-placing-outer-space-an-earthly-ethnography-of-other-worlds-by-lisa-messeri/
