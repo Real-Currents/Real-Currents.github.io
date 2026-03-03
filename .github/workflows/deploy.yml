@@ -1,0 +1,79 @@
+name: Deploy to Gandi + IPFS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
+      - name: Setup Node.js
+        uses: ./.github/workflows/node.js
+
+      - name: Setup Quarto
+        uses: ./.github/workflows/quarto
+
+      - name: Build Site (Quarto + Next.js)
+        run: npm run build
+
+      - name: List build outputs
+        run: ls -lA ./out
+
+      - name: Deploy to Gandi via Git
+        env:
+          GANDI_GIT_URL: ${{ secrets.GANDI_GIT_URL }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git remote add gandi $GANDI_GIT_URL || true
+          git push gandi main --force
+
+      - name: Install ipfs-car CLI
+        run: npm install -g ipfs-car
+
+      - name: Package Build as CAR
+        run: ipfs-car pack out --output deploy.car
+
+      - name: Upload CAR to IPFS (via Gandi Gateway)
+        id: ipfs_upload
+        env:
+          DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
+        run: |
+          RESPONSE=$(curl -s -X POST https://www.real-currents.com/api/deploy \
+            -H "x-api-key: $DEPLOY_SECRET" \
+            -H "Content-Type: application/vnd.ipld.car" \
+            --data-binary @deploy.car)
+
+          echo "IPFS Response: $RESPONSE"
+          CID=$(echo $RESPONSE | jq -r '.cid')
+          echo "cid=$CID" >> $GITHUB_OUTPUT
+          echo "Deployed to IPFS: $CID"
+
+      - name: Update IPNS Pointer (xr-baseline-0)
+        env:
+          DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
+          CID: ${{ steps.ipfs_upload.outputs.cid }}
+        run: |
+          curl -X POST https://www.real-currents.com/api/ipns/publish \
+            -H "x-api-key: $DEPLOY_SECRET" \
+            -H "Content-Type: application/json" \
+            -d "{\"key\": \"xr-baseline-0\", \"cid\": \"$CID\"}"
+
+          echo "IPNS updated: xr-baseline-0 -> $CID"
+
+      - name: Log Deployment
+        run: |
+          echo "Live site updated at https://www.real-currents.com"
+          echo "IPFS snapshot: https://www.real-currents.com/ipfs/${{ steps.ipfs_upload.outputs.cid }}"
+          echo "IPNS stable link: https://www.real-currents.com/ipns/xr-baseline-0"
