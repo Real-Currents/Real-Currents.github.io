@@ -60,3 +60,7 @@ graph TD
 1. Deploy `gateway/` to Gandi VPS
 2. Set `DEPLOY_SECRET` environment variable
 3. (Optional) Configure Kubo IPFS for IPNS publishing
+
+## Sovereign Worker Setup
+
+For VPS setup (Kubo, IPNS keys, local pinning, Caddy), see **[SOVEREIGN-WORKER-SETUP.md](./SOVEREIGN-WORKER-SETUP.md)**.
