@@ -10,9 +10,13 @@ const nextConfig = {
     //     "src/components/SvelteMainComponent.tsx",
     //
     // ],
-    "output": "export", // <=== enables static exports
+    "output": "export", // <=== enables static export; production server serves out/ as static files
     // "output": "standalone",
+    "images": {
+        "unoptimized": true, // required for static export
+    },
     "reactStrictMode": true,
+    "trailingSlash": true, // ensures /path/ → /path/index.html resolves correctly
     "typescript": {
         // !! WARN !!
         // Dangerously allow production builds to
