@@ -4,15 +4,12 @@ const nextConfig = {
     "eslint": {
         "ignoreDuringBuilds": true,
     },
-    // "ignorePatterns": [
-    //     "jest.config.js",
-    //     "lib",
-    //     "src/components/SvelteMainComponent.tsx",
-    //
-    // ],
+    "images": {
+        "unoptimized": true,
+    },
     "output": "export", // <=== enables static exports
-    // "output": "standalone",
     "reactStrictMode": true,
+    "trailingSlash": true,
     "typescript": {
         // !! WARN !!
         // Dangerously allow production builds to
