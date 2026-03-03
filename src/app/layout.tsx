@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Comfortaa, Inter, Bitter, Montserrat, Roboto } from "next/font/google";
+import { Comfortaa } from "next/font/google";
 import { getIntroContent } from "@/utils";
 
 import "./fonts.css";
@@ -20,6 +20,10 @@ export const metadata: HeaderLayoutProps = {
     ...getIntroContent().data,
   title: "Real~Currents",
   description: "Experiments in Information Experience Design (IxD)",
+  metadataBase: new URL("https://www.real-currents.com"),
+  alternates: {
+      canonical: "/xr/baseline-0",
+  },
 };
 
 // TODO: Use metadata props to build header
@@ -53,12 +57,24 @@ function HeaderLayout ({ title, description, subtitles }: HeaderLayoutProps) {
 }
 
 function FooterLayout () {
+  const snapshotCid = process.env.NEXT_PUBLIC_IPFS_SNAPSHOT_CID?.trim();
+
   return (
       <footer>
           <p id="copyright"></p>
           <p id="built_with">
-              ...built with <a href="https://nextjs.org/docs" target="_blank">Next.js</a>&nbsp;
-              &&nbsp;<a href="https://quarto.org/docs/get-started/" target="_blank">Quarto</a>
+              ...built with <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer">Next.js</a>&nbsp;
+              &&nbsp;<a href="https://quarto.org/docs/get-started/" target="_blank" rel="noopener noreferrer">Quarto</a>
+          </p>
+          <p className={"ipfs-links"}>
+              <strong>Permanent Web Links:</strong><br />
+              <a href="/ipns/xr-baseline-0">Latest Version (IPNS)</a>
+              {snapshotCid ? (
+                  <>
+                      {" | "}
+                      <a href={`/ipfs/${snapshotCid}`}>Immutable Snapshot (IPFS)</a>
+                  </>
+              ) : null}
           </p>
       </footer>
   );
@@ -69,9 +85,6 @@ export default function RootLayout ({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-    console.log(metadata);
-
     return (
         <html lang="en">
         <body className={comfortaa.className}>

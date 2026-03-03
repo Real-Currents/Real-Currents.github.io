@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    "distDir": "out",
     "eslint": {
         "ignoreDuringBuilds": true,
     },
@@ -12,6 +11,10 @@ const nextConfig = {
     // ],
     "output": "export", // <=== enables static exports
     // "output": "standalone",
+    "trailingSlash": true,
+    "images": {
+        "unoptimized": true,
+    },
     "reactStrictMode": true,
     "typescript": {
         // !! WARN !!
