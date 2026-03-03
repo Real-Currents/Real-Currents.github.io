@@ -1,0 +1,15 @@
+{
+  "xr-baseline-0": {
+    "latest_cid": "bafybeihdwd...",
+    "history": [
+      { "version": "v1.0", "cid": "bafy...old1", "date": "2026-01-15" },
+      { "version": "v1.1", "cid": "bafy...old2", "date": "2026-02-20" }
+    ],
+    "provenance": {
+      "storage_provider": "f012345",
+      "deal_id": 8829102,
+      "endowment_status": "active",
+      "replication_factor": 2
+    }
+  }
+}
