@@ -4,11 +4,13 @@
   "version": "1.0.0",
   "author": "John Hall",
   "license": "CC-BY-3.0",
-  "main": "index.js",
+  "main": "server.js",
   "private": true,
   "repository": "Real-Currents/www",
   "dependencies": {
     "dateformat": "^5.0.3",
+    "ipfs-http-client": "^60.0.1",
+    "mime-types": "^2.1.35",
     "next": "^14.2.15",
     "react": "18.3.1",
     "react-dom": "18.3.1"
@@ -30,18 +32,21 @@
     "build": "npm run render:markdown && npm run build:next",
     "build:next": "next build",
     "clean": "rm -rf _freeze/* _site/*",
-    "dev": "npm run render:markdown && npm run dev:next",
+    "dev": "npm run render:markdown && node server.js",
     "dev:next": "next dev",
-    "start": "python -m http.server -d out 3000",
     "lint": "next lint",
     "next": "next",
     "preview": "quarto preview",
+    "preview:post": "quarto preview content/posts/info-arch-in-avxr.qmd --no-browser",
     "render:markdown": "cd content && quarto render README.qmd --to gfm --output index.md && npm run render:about && npm run render:dev && npm run render:posts && bash -c \"cd ../ && ls -l ./ && if [ -d site_libs ]; then cp -LR site_libs public/ && rm -rf site_libs;fi && if [ -f search.json ]; then rm search.json;fi\"",
     "render:about": "cd content/about && quarto render index.qmd --to gfm --output index.md --output-dir .",
     "render:dev": "cd content/dev && quarto render --output-dir . && quarto render index.qmd --to gfm --output README.md --output-dir .",
     "render:js-demos": "bash -c \"cd content/js-demos && quarto render --output-dir . && quarto render index.qmd --to gfm --output README.md --output-dir . && quarto render index.qmd --to html --output index.html --output-dir .  && cd ../../ && ls -l ./ && cp -LR site_libs public/ && rm -rf site_libs && rm search.json\"",
     "render:posts": "cd content/posts && quarto render --output-dir .",
-    "render:readme": "quarto render content/README.qmd --to gfm --output README.md"
+    "render:readme": "quarto render content/README.qmd --to gfm --output README.md",
+    "start": "NODE_ENV=production node server.js",
+    "start:static": "python -m http.server -d out 3000",
+    "start:adb-port-forwarding": "adb reverse tcp:3000 tcp:3000"
   },
   "type": "module"
 }

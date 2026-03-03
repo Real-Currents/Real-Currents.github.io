@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Comfortaa, Inter, Bitter, Montserrat, Roboto } from "next/font/google";
 import { getIntroContent } from "@/utils";
+import { IpfsLinks } from "@/components/IpfsLinks";
 
 import "./fonts.css";
 import "./globals.css";
@@ -16,10 +17,11 @@ interface HeaderLayoutProps extends Metadata {
 }
 
 // TODO: Populate metadata from index.md front matter
-export const metadata: HeaderLayoutProps = {
+export const metadata: HeaderLayoutProps & { metadataBase?: URL } = {
     ...getIntroContent().data,
   title: "Real~Currents",
   description: "Experiments in Information Experience Design (IxD)",
+  metadataBase: new URL("https://www.real-currents.com"),
 };
 
 // TODO: Use metadata props to build header
@@ -60,6 +62,7 @@ function FooterLayout () {
               ...built with <a href="https://nextjs.org/docs" target="_blank">Next.js</a>&nbsp;
               &&nbsp;<a href="https://quarto.org/docs/get-started/" target="_blank">Quarto</a>
           </p>
+          <IpfsLinks />
       </footer>
   );
 }

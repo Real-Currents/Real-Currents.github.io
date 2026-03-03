@@ -448,7 +448,7 @@ div#transparent_background {
   position:relative;
   width:800px;
   min-width:540px;
-  min-height:9999px;
+  min-height:24576px;
   margin:0 auto;
   background-color:#191919;
   opacity:.75;
@@ -465,7 +465,7 @@ div#transparent_background {
 
 div#home_screen {
   position:relative;
-  margin:-9999px auto 0;
+  margin:-24576px auto 0;
   width:800px;
   min-width:604px;
   min-height:100%;
