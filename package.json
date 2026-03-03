@@ -4,11 +4,14 @@
   "version": "1.0.0",
   "author": "John Hall",
   "license": "CC-BY-3.0",
-  "main": "index.js",
+  "main": "server.js",
   "private": true,
   "repository": "Real-Currents/www",
   "dependencies": {
     "dateformat": "^5.0.3",
+    "express-rate-limit": "^8.2.1",
+    "ipfs-http-client": "^60.0.1",
+    "mime-types": "^3.0.2",
     "next": "^14.2.15",
     "react": "18.3.1",
     "react-dom": "18.3.1"
@@ -29,7 +32,7 @@
     "build": "npm run render:markdown && npm run build:next",
     "build:next": "next build",
     "clean": "rm -rf _freeze/* _site/*",
-    "dev": "npm run render:markdown && npm run dev:next",
+    "dev": "npm run render:markdown && NODE_ENV=development node server.js",
     "dev:next": "next dev",
     "lint": "next lint",
     "next": "next",
@@ -41,7 +44,8 @@
     "render:js-demos": "bash -c \"cd content/js-demos && quarto render --output-dir . && quarto render index.qmd --to gfm --output README.md --output-dir . && quarto render index.qmd --to html --output index.html --output-dir .  && cd ../../ && ls -l ./ && cp -LR site_libs public/ && rm -rf site_libs && rm search.json\"",
     "render:posts": "cd content/posts && quarto render --output-dir .",
     "render:readme": "quarto render content/README.qmd --to gfm --output README.md",
-    "start": "python -m http.server -d out 3000",
+    "start": "NODE_ENV=production node server.js",
+    "start:static": "python -m http.server -d out 3000",
     "start:adb-port-forwarding": "adb reverse tcp:3000 tcp:3000"
   },
   "type": "module"

@@ -1,0 +1,77 @@
+name: Deploy to Gandi + IPFS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Site (Quarto + Next.js)
+        run: npm run build
+
+      - name: Deploy to Gandi via Git
+        env:
+          GANDI_GIT_URL: ${{ secrets.GANDI_GIT_URL }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git remote add gandi "$GANDI_GIT_URL" || true
+          git push gandi HEAD:main --force
+
+      - name: Install ipfs-car CLI
+        run: npm install -g ipfs-car
+
+      - name: Package Build as CAR
+        run: ipfs-car pack out --output deploy.car
+
+      - name: Upload CAR to IPFS (via Gandi Gateway)
+        id: ipfs_upload
+        env:
+          DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
+        run: |
+          RESPONSE=$(curl -sSf -X POST https://www.real-currents.com/api/deploy \
+            -H "x-api-key: $DEPLOY_SECRET" \
+            -H "Content-Type: application/vnd.ipld.car" \
+            --data-binary @deploy.car)
+          echo "IPFS Response: $RESPONSE"
+
+          CID=$(node -e "const fs=require('node:fs');const payload=JSON.parse(fs.readFileSync(0,'utf8'));if(!payload.cid){process.exit(1);}process.stdout.write(payload.cid);" <<< "$RESPONSE")
+          echo "cid=$CID" >> "$GITHUB_OUTPUT"
+          echo "Deployed to IPFS: $CID"
+
+      - name: Update IPNS Pointer (xr-baseline-0)
+        env:
+          DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
+          CID: ${{ steps.ipfs_upload.outputs.cid }}
+        run: |
+          curl -sSf -X POST https://www.real-currents.com/api/ipns/publish \
+            -H "x-api-key: $DEPLOY_SECRET" \
+            -H "Content-Type: application/json" \
+            -d "{\"key\": \"xr-baseline-0\", \"cid\": \"$CID\"}"
+
+          echo "IPNS updated: xr-baseline-0 -> $CID"
+
+      - name: Log Deployment
+        run: |
+          echo "✅ Live site updated at https://www.real-currents.com"
+          echo "✅ IPFS snapshot: https://www.real-currents.com/ipfs/${{ steps.ipfs_upload.outputs.cid }}"
+          echo "✅ IPNS stable link: https://www.real-currents.com/ipns/xr-baseline-0"
