@@ -1,6 +1,8 @@
 # Sovereign Worker VPS Setup
 
-Step-by-step guide to set up the **SOVEREIGN WORKER** components on a fresh Ubuntu 26.04 LTS (Resolute Raccoon) VPS:
+Step-by-step guide to set up the **SOVEREIGN WORKER** components on a fresh Ubuntu 26.04 LTS (Resolute Raccoon) VPS.
+
+> **Note:** Kubo’s HTTP RPC API (`/api/v0/...`) remains the stable interface. The Gandi gateway uses `kubo-rpc-client` (the official JS client for that API). For in-browser or in-process IPFS nodes, the IPFS team now recommends Helia (`@helia/*`).
 
 - **Kubo IPFS Node** – IPFS daemon for content storage and retrieval
 - **IPNS Key Manager** – Ed25519 keys for stable, updateable pointers (e.g. `xr-baseline-0`)
@@ -21,7 +23,8 @@ Step-by-step guide to set up the **SOVEREIGN WORKER** components on a fresh Ubun
 
 ```bash
 # Set version (check https://dist.ipfs.tech/#kubo for latest)
-KUBO_VERSION="v0.31.0"   # or v0.40.x for newest; ensure compatibility with ipfs-http-client
+# v0.40.x recommended; HTTP RPC API (/api/v0/...) is stable and used by kubo-rpc-client
+KUBO_VERSION="v0.40.1"
 
 # Download and install
 cd /tmp
