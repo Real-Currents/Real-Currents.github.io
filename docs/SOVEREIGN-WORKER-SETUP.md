@@ -21,7 +21,7 @@ Step-by-step guide to set up the **SOVEREIGN WORKER** components on a fresh Ubun
 
 ```bash
 # Set version (check https://dist.ipfs.tech/#kubo for latest)
-KUBO_VERSION="v0.31.0"   # or v0.40.x for newest; ensure compatibility with ipfs-http-client
+KUBO_VERSION="v0.40.0"   # ensure compatibility with ipfs-http-client
 
 # Download and install
 cd /tmp
