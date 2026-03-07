@@ -14,7 +14,7 @@ This document summarizes the IPFS/IPNS integration implemented per the Real-Curr
   - `GET /api/ipfs/current` – Returns current CID for IPNS key (for footer links)
   - Falls through to Next.js for all other routes
 
-- **Dependencies added**: `ipfs-http-client`, `mime-types`
+- **Dependencies added**: `kubo-rpc-client` (Kubo HTTP RPC API client), `mime-types`
 
 - **Scripts updated**:
   - `dev` – Uses custom server (with Quarto render)

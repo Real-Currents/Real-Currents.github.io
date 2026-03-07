@@ -1,14 +1,14 @@
 import { createServer } from 'http';
 import { parse } from 'url';
 import next from 'next';
-import { create } from 'ipfs-http-client';
+import { create } from 'kubo-rpc-client';
 import mime from 'mime-types';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-// IPFS Client - connects to your Worker node via Caddy
+// Kubo RPC Client - connects to Worker node via Caddy (Kubo HTTP RPC API /api/v0/...)
 // When IPFS_NODE_HOST is not set (e.g. local dev), IPFS/IPNS routes will return 503
 let ipfs = null;
 if (process.env.IPFS_NODE_HOST && process.env.IPFS_USER && process.env.IPFS_PASS) {
@@ -16,6 +16,7 @@ if (process.env.IPFS_NODE_HOST && process.env.IPFS_USER && process.env.IPFS_PASS
     host: process.env.IPFS_NODE_HOST,
     port: 443,
     protocol: 'https',
+    path: 'api/v0',
     headers: {
       authorization: `Basic ${Buffer.from(
         `${process.env.IPFS_USER}:${process.env.IPFS_PASS}`
