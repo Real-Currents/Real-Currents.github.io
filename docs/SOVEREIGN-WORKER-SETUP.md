@@ -42,12 +42,48 @@ ipfs version
 ## 2. Initialize Kubo
 
 ```bash
-# Initialize the repo (creates ~/.ipfs/)
+# Initialize the repo (creates ~/.ipfs/ by default)
 ipfs init
 
 # Optional: use lowpower profile on small VPS
 # ipfs init --profile=lowpower
 ```
+
+---
+
+## 2b. Configure Storage Directory (Optional)
+
+By default, Kubo stores all data under `~/.ipfs/` (or `$IPFS_PATH`). To use a different location (e.g. a larger mounted disk):
+
+**Option A: Custom path via `IPFS_PATH`**
+
+```bash
+# Choose a path (e.g. dedicated volume or larger partition)
+export IPFS_PATH=/var/lib/ipfs   # or /mnt/data/ipfs, etc.
+
+# Initialize in that location (must be empty)
+sudo mkdir -p $IPFS_PATH
+sudo chown $USER:$USER $IPFS_PATH
+ipfs init
+
+# Persist for systemd: set Environment=IPFS_PATH=/var/lib/ipfs in the service file (step 6)
+```
+
+**Option B: Move existing repo**
+
+```bash
+# Stop the daemon if running, then move
+ipfs shutdown 2>/dev/null || true
+mv ~/.ipfs /var/lib/ipfs
+
+# Use the new path (set in systemd or shell)
+export IPFS_PATH=/var/lib/ipfs
+ipfs daemon
+```
+
+**Option C: Datastore paths (advanced)**
+
+For fine-grained control (e.g. blocks on one disk, leveldb on another), edit `$IPFS_PATH/config` and modify the `Datastore.Spec.mounts` paths. See [Kubo config docs](https://github.com/ipfs/kubo/blob/master/docs/config.md).
 
 ---
 
@@ -113,6 +149,7 @@ User=YOUR_USER
 ExecStart=/usr/local/bin/ipfs daemon
 Restart=on-failure
 RestartSec=10
+# Default: ~/.ipfs. For custom storage (step 2b), use e.g. Environment=IPFS_PATH=/var/lib/ipfs
 Environment=IPFS_PATH=/home/YOUR_USER/.ipfs
 
 [Install]
@@ -227,7 +264,7 @@ DEPLOY_SECRET=your-deploy-secret
 
 | Issue                    | Check                                                |
 |--------------------------|------------------------------------------------------|
-| `ipfs daemon` fails      | `ipfs repo fsck`; ensure enough disk space           |
+| `ipfs daemon` fails      | `ipfs repo fsck`; ensure enough disk space; check `IPFS_PATH` if using custom storage |
 | Caddy 502                | `systemctl status ipfs`; ensure Kubo is listening    |
 | Auth rejected            | Verify hash in Caddyfile; check username/password; try `basicauth` if `basic_auth` fails (older Caddy) |
 | IPNS publish fails       | Key exists: `ipfs key list -l`; key name matches      |
