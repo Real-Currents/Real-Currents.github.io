@@ -21,6 +21,26 @@ const nextConfig = {
         // !! WARN !!
         "ignoreBuildErrors": true,
     },
+    async rewrites() {
+        return [
+            {
+                source: "/threejs-portal-effect",
+                destination: "/threejs-portal-effect/index.html",
+            },
+            {
+                source: "/threejs-portal-effect/:path*",
+                destination: "/threejs-portal-effect/:path*",
+            },
+            {
+                source: "/webxr-layers-start",
+                destination: "/webxr-layers-start/index.html",
+            },
+            {
+                source: "/webxr-layers-start/:path*",
+                destination: "/webxr-layers-start/:path*",
+            },
+        ];
+    },
 };
 
 export default nextConfig;

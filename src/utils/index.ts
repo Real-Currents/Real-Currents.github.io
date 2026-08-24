@@ -62,7 +62,15 @@ export function getPostMetadata (basePath: string): Post[] {
 }
 
 export function cleanMarkdownToJSContent (content: string) {
-    const result = content.replace(/class=/g, "className=");
+    let result = content.replace(/class=/g, "className=");
+
+    // Fix multi-line image markdown and normalize image paths
+    result = result.replace(/!\[([\s\S]*?)\]\(([^)]+)\)/g, (match, alt, url) => {
+        const cleanAlt = alt.replace(/\n+/g, ' ').trim();
+        const cleanUrl = url.replace(/\.\.\/\.\.\/content\/posts\/images\//g, "/content/posts/images/");
+        return `![${cleanAlt}](${cleanUrl})`;
+    });
+
     console.log(content.match(/(class=)/g));
     return result;
 }
