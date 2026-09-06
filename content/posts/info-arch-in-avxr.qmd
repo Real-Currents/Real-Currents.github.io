@@ -3,7 +3,7 @@ title: "Information architecture in the [Augmented|Virtual|eXtended] Reality Age
 subtitle: "A critical examination of AR/VR/XR as extensions of social infrastructure"
 author:
   - "John Hall"
-date: "2025-09-17"
+date: "2026-09-06"
 categories:
   - AR
   - VR
@@ -20,7 +20,9 @@ lightbox: auto
 
 _**Reality-altering technology represents a fundamental shift from tools that augment human capabilities to technologies that reconstruct the very foundations of human experience and understanding**. This positions Augmented Reality (**AR**), Virtual Reality (**VR**), and Extended Reality (**XR**) experiences, designed and developed with AI assistance, not as mere interface improvements but as potentially the most consequential cognitive and social technologies since the printing press - with all the accompanying risks and responsibilities.[^reality_altering_definition] Just as Marshall McLuhan demonstrated in **The Gutenberg Galaxy** that printing technology fundamentally altered human consciousness, creating linear, sequential thinking patterns and individualistic social organization,[^mcluhan_gutenberg] AR/VR/XR technologies may represent an equally profound transformation, potentially creating new forms of multi-sensory, embodied cognition while risking the emergence of what might be called "immersive consciousness" - a singular way of perceiving mediated through designed experiences.[^immersive_consciousness_concern]_
 
-After building and testing immersive "experiential baseline" prototypes, a critical gap has emerged: **these technologies may fragment shared understanding as easily as they build it**, and the path from abstract spatial visualization to genuine human comprehension remains largely unmapped.[^prototype_learning]
+These two risks are not competing claims but a single mechanism viewed from inside and outside. Print's precedent shows the pattern: it homogenized—typographic consciousness presented itself as universal—even as it fragmented, rendering other epistemologies illegible and narrowing the space of thinkable thought. A dominant mode fragments the space of possible consciousnesses *by* being singular. Immersive media repeat the structure with higher fidelity: the new multi-sensory modes of cognition are plural in kind, but each instance is privately singular in its mediation. Each participant receives a designed mode of perception—a world engineered for one—and the aggregate of millions of incompatible singularities is precisely the fragmentation of shared understanding. We share a device, not a world; the tension is in the mediation structure, not the cognition itself.
+
+After building and testing immersive "experiential baseline" prototypes, a critical gap has emerged: **these technologies may fragment shared understanding as easily as they build it**, and the path from abstract spatial visualization to genuine human comprehension remains largely unmapped.[^prototype_learning] 
 
 ## The Polycrisis of Understanding
 
@@ -235,7 +237,7 @@ We risk creating not shared understanding but a more sophisticated form of mutua
 
 ### Architects of Consciousness
 
-We are, whether we recognize it or not, becoming what McLuhan might have called **architects of consciousness itself**. This requires not just technical skill but philosophical sophistication, ethical commitment, and empirical rigor that current technology development practices rarely provide.
+We are, whether we recognize it or not, becoming what McLuhan might have called **architects of consciousness**. This requires not just technical skill but philosophical sophistication, ethical commitment, and empirical rigor that current technology development practices rarely provide.
 
 The stakes, as McLuhan understood, are not merely technological but civilizational. How we design reality-altering technologies may determine whether future human societies can maintain the shared foundations necessary for democratic deliberation, scientific collaboration, and collective response to global challenges—or whether we fracture into incompatible experiential realities, each convinced of its own universality, unable to recognize how our consciousness has been shaped by our media.
 

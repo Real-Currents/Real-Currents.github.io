@@ -20,7 +20,7 @@ export default function Home() {
                 content: "",
                 contentRoot: "content/posts",
                 slug: "info-arch-in-avxr", // => /content/posts/info-arch-in-avxr.html
-                date: new Date('2025-09-11'),
+                date: new Date('2026-09-06'),
                 description: "Reality-altering technology represents a fundamental shift from tools that augment human capabilities to technologies that reconstruct the very foundations of human experience and understanding..."
             },
             {
