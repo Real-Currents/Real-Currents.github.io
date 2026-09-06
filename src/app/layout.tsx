@@ -100,7 +100,7 @@ export default function RootLayout ({
                     <span>*</span>&nbsp;<em>Please contact John for details and demos: <a href="mailto:john@real-currents.com">john@real-currents.com</a></em>
                 </p>
                 <p id={"license-details"}>
-                    <em>Unless otherwise noted here, this content is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/nz/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 License, 2009-2025</a></em><br />
+                    <em>Unless otherwise noted here, this content is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/nz/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 License, 2009-2026</a></em><br />
                     <img src="http://i.creativecommons.org/l/by-sa/3.0/nz/88x31.png" alt="Creative Commons Licence" />
                 </p>
             </div>
