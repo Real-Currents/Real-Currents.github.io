@@ -16,6 +16,14 @@ export default function Home() {
             // { title: "Cinnamon Rolls", slug: "cinnamon_rolls" }, // => /content/recipes/cinnamon_rolls.html
             // { title: "Lemon Poppy Seed Muffins", slug: "lemon_poppy_seed_muffins" }, // => /content/recipes/lemon_poppy_seed_muffins.html
             {
+                title: "The War of Myth: Will, Imagination, and the Tools of Transformation",
+                content: "",
+                contentRoot: "content/posts",
+                slug: "war-of-myth", // => /content/posts/war-of-myth.html
+                date: new Date('2026-09-07'),
+                description: "Reality-altering technology as terrain in the long struggle over collective consciousness: what generates and sustains the will for transformation, and what AR/VR/XR — the first medium to contain every prior medium — does to that terrain."
+            },
+            {
                 title: "Information architecture in the [Augmented|Virtual|eXtended] Reality Age",
                 content: "",
                 contentRoot: "content/posts",
