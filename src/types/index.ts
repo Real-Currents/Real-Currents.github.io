@@ -8,7 +8,7 @@ export interface HeaderLayoutProps extends Metadata {
 
 export interface Post {
     content: string;
-    description: string;
+    contentRoot: string;
     title: string;
     slug: string;
     date?: Date;

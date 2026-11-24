@@ -16,6 +16,14 @@ export default function Home() {
             // { title: "Cinnamon Rolls", slug: "cinnamon_rolls" }, // => /content/recipes/cinnamon_rolls.html
             // { title: "Lemon Poppy Seed Muffins", slug: "lemon_poppy_seed_muffins" }, // => /content/recipes/lemon_poppy_seed_muffins.html
             {
+                title: "Arriving",
+                content: "",
+                contentRoot: "content/posts",
+                slug: "arriving", // => /content/posts/arriving.html
+                date: new Date('2026-09-27'),
+                description: "On being nine days late to your own life"
+            },
+            {
                 title: "Kinship Without Design",
                 content: "",
                 contentRoot: "content/posts",
