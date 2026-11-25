@@ -1,0 +1,64 @@
+# market_1m — analysis scripts, data, Quarto docs, rendered exports
+
+# --- Secrets and credentials (never commit) ---
+.env
+.env.*
+*.pem
+*.key
+# curl cookie jar from the Yahoo fetch probes
+cj.txt
+cookies.txt
+*.cookies
+
+# --- Python environment and caches ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- R / Quarto artifacts ---
+.Rhistory
+.RData
+.Rproj.user/
+.Rapp.history
+*.rds
+.quarto/
+*_cache/
+*_files/
+/.quarto_freeze/
+
+# --- Run logs and process leftovers (nohup / claude -p / fetch scripts) ---
+*.log
+*.log.bak
+*.bak
+nohup.out
+*.pid
+
+# --- Agent / editor local state ---
+.claude/
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# --- Intermediate render products (keep the final PDFs in export/) ---
+export/_build/
+export/pdf_pages/
+export/*.raw.html
+export/*.html
+
+# --- Derived bulk text, regenerable from the transcript ---
+notes/transcript_condensed.txt
+
+# --- Scratch ---
+tmp/
+scratch/
+*.tmp
+
+data/
+export/
+harness/
