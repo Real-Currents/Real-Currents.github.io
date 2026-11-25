@@ -59,6 +59,11 @@ tmp/
 scratch/
 *.tmp
 
-data/
+# data/: track only the JSON files (ignore the contents, then re-include .json)
+data/*
+!data/*.json
+
 export/
 harness/
+
+docs/self-directed-trading-account-crypto-onramp-*
