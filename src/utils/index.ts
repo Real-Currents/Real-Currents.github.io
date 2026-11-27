@@ -8,7 +8,7 @@ export function getContent (contents: string) {
     const matterResult = matter(contents);
 
     Debugger.on = true;
-    Debugger.log("Hello, Debugger");
+    // Debugger.log("Hello, Debugger");
 
     // for (const p in matterResult) {
     //     if (matterResult.hasOwnProperty(p)) {

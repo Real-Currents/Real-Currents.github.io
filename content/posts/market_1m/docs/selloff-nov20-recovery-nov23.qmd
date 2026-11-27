@@ -10,7 +10,7 @@ Educational market analysis. Not investment advice. All figures are computed in 
 
 ## Summary
 
-- Friday Nov 20 was a repricing, not a liquidation. The four primary stocks lost about $379B of combined market capitalization (computed in `scripts/07_sums_doc1.R`) while about $44B of those stocks traded (daily volume times typical price). The worst minute for GOOG, META, SNAP and NVDA was 15:55, with volume 4.9x to 10.7x a median minute; every one of the five closed in the bottom 3% to 9% of its day's range.
+- Friday Nov 20 was a repricing, not a liquidation. The four primary stocks lost about $379B of combined market capitalization (computed in `R/07_sums_doc1.R`) while about $44B of those stocks traded (daily volume times typical price). The worst minute for GOOG, META, SNAP and NVDA was 15:55, with volume 4.9x to 10.7x a median minute; every one of the five closed in the bottom 3% to 9% of its day's range.
 - Monday Nov 23 recovered about 87% of that four-stock cap loss at the close, but the recovery was not uniform. It arrived almost entirely as an overnight gap, and the shape of the intraday session split the group: AVGO gave back its whole gap within 17 minutes and closed +3.00% close-over-close (retracing 22% of its Friday drop), while GOOG, META and NVDA closed above their Thursday levels.
 - The two "conflicting" Monday readings for NVDA (+31% in the news, -1.19% in Yahoo dailies) are both correct. They measure different things: close-over-close is +31.48%, open-to-close is -1.19%, and the difference is a +33.07% opening gap.
 - One of the brief's anchors does not survive contact with the raw data: AVGO's Friday close is 304.41, not 340.20. On the correct basis AVGO gapped up +5.40% on Monday, not down -5.7%. Details in the reconciliation section.
@@ -20,7 +20,7 @@ Educational market analysis. Not investment advice. All figures are computed in 
 ## Data and method
 
 - Source: Yahoo Finance v8 chart endpoint (https://query1.finance.yahoo.com/v8/finance/chart/). Monday 1-minute bars for AVGO, GOOG, META, SNAP and NVDA, Friday NVDA 1-minute bars, and daily bars for the five stocks plus ^GSPC, ^VIX and ^TNX covering Nov 16 to Nov 24.
-- Fetch discipline: period1 and period2 were computed as epoch seconds from the exact New York dates (`scripts/fetch_nov23.sh`); `scripts/00_verify_data.R` confirms every file's first timestamp maps to the intended date (Mon files start 2026-11-23 09:30 ET; Friday files 2026-11-20 09:30 ET). Yahoo returned HTTP 429 to the first attempts (Python urllib, and curl with a Linux user agent); curl with a Windows-style browser user agent then succeeded for every file.
+- Fetch discipline: period1 and period2 were computed as epoch seconds from the exact New York dates (`scripts/fetch_nov23.sh`); `R/00_verify_data.R` confirms every file's first timestamp maps to the intended date (Mon files start 2026-11-23 09:30 ET; Friday files 2026-11-20 09:30 ET). Yahoo returned HTTP 429 to the first attempts (Python urllib, and curl with a Linux user agent); curl with a Windows-style browser user agent then succeeded for every file.
 - Friday AVGO, GOOG, META, SNAP bars are John's files already on disk (391 bars, 09:30 to 16:00). The Monday bars have 390 bars (09:30 to 15:59); Yahoo had no 16:00 bar for Monday at fetch time.
 - Market capitalization uses the shares in the brief: AVGO 4.77B; META 2.56B; SNAP 1.718B; Alphabet 12,280,813,656 (all share classes valued at the GOOG price, an approximation). No NVDA share count was supplied, so NVDA gets price and volume analysis but no capitalization or ratio.
 - Dollars traded in a minute are volume times the bar's mid-price ((high + low) / 2), the method of `temp_calc_flow.R`. Ratio is the absolute capitalization change over that minute divided by dollars traded in it.
@@ -236,6 +236,6 @@ These are observations from the tape, not forecasts:
 
 ## Reproducibility
 
-- `scripts/fetch_nov23.sh` (fetch, computed epochs), `scripts/00_verify_data.R` (date checks), `scripts/03_analysis.R` (statistics), `scripts/05_tables_doc1.R` (the tables in this document), `scripts/06_extras_doc1.R` and `scripts/07_sums_doc1.R` (the figures quoted in prose).
+- `scripts/fetch_nov23.sh` (fetch, computed epochs), `R/00_verify_data.R` (date checks), `R/03_analysis.R` (statistics), `R/05_tables_doc1.R` (the tables in this document), `R/06_extras_doc1.R` and `R/07_sums_doc1.R` (the figures quoted in prose).
 - Raw data: `data/*_20261123_1m.json`, `data/NVDA_20261120_1m.json`, `data/*_daily_20261116_1124.json`, and the original `AVGO.json`, `GOOG.json`, `META.json`, `SNAP.json`.
 - This is educational analysis of publicly reported prices. It is not investment advice.

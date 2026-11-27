@@ -6,6 +6,7 @@ project:
     - "!*.md"
     - "*.qmd"
     - "**/*.qmd"
+    - "!content/posts/market_1m/**"
     - "!content/posts/proj-fcc-report/*.qmd"
     - "!posts/09_fcc-data/index.qmd"
     - "!posts/09_fcc-data/proj-fcc-report/about.qmd"

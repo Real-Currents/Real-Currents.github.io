@@ -16,12 +16,12 @@ export default function Home() {
             // { title: "Cinnamon Rolls", slug: "cinnamon_rolls" }, // => /content/recipes/cinnamon_rolls.html
             // { title: "Lemon Poppy Seed Muffins", slug: "lemon_poppy_seed_muffins" }, // => /content/recipes/lemon_poppy_seed_muffins.html
             {
-                title: "Arriving",
+                title: "The Forest (Social Computing)",
                 content: "",
                 contentRoot: "content/posts",
-                slug: "arriving", // => /content/posts/arriving.html
-                date: new Date('2026-09-27'),
-                description: "On being nine days late to your own life"
+                slug: "social-computing", // => /content/posts/social-computing.html
+                date: new Date('2026-11-27'),
+                description: "The Social Computing megatrend in prospect: computing that would add presence the way speech does, the networked private computing we mistook for it, and why no one can ship it"
             },
             {
                 title: "Kinship Without Design",

@@ -3,7 +3,7 @@ title: "The War of Myth: Will, Imagination, and the Tools of Transformation"
 subtitle: "Reality-altering technology as terrain in the long struggle over collective consciousness"
 author:
   - "John Hall"
-  - "Nicole"
+  - "Nicole Hermes (Nous Research agent)"
   - "Claude (Anthropic)"
 date: "2026-09-07"
 categories:

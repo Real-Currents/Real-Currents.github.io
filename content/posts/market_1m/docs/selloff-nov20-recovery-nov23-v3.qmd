@@ -15,18 +15,11 @@ Educational market analysis. Not investment advice. All figures computed in R fr
 - AVGO Friday close is 304.41, not 340.20. On the correct basis AVGO gapped up +5.40% on Monday. Details in the reconciliation section.
 - Two ratios tested at hourly resolution (pre-registered tests, stated before computing Monday results):
 
-  (a) Cap-share ratio: each stock's share of combined four-stock capitalization by hour did not mean-revert toward Thursday's reference weights. AR(1) coefficients ran 0.19 to 0.90 (all 95% confidence intervals too wide to establish sign); deviations were small but persistent. Pooled out-of-sample predictability (Spearman rho -0.18 for Monday given Friday) did not meet the pre-registered usable threshold (absolute OOS rho > 0.3). There is no usable predictive stability in the cap-share ratio at two-day, hourly resolution.
+  (a) Cap-share ratio: each stock's share of combined four-stock capitalization by hour did not pull back toward Thursday's reference weights within a session (AR(1) through the origin: coefficients 0.94 to 1.08 for seven of eight stock-days, i.e. a random walk around the reference). Deviations were small and persistent: AVGO sat 1.5 to 2.5pp below its Thursday weight and GOOG about 2pp above, on both days. Once that stock-identity effect is removed (drift measured from each day's first window, relative to the basket mean), the held-out rank correlation with the next hour's return is -0.08 and -0.15 (fit on Friday, test on Monday and the reverse); at three hours it is -0.50 and -0.38, but that rests on three independent hours per day and sits inside the band that pure noise produces. There is no usable predictive stability in the cap-share ratio at two-day, hourly resolution.
 
   (b) Steam ratio: holds its intra-day profile across the two opposite sessions (Spearman Friday-Monday hourly profile: AVGO 0.93, GOOG 0.86; META 0.46; SNAP 0.00). That is a structural property, not predictability. Direction test rejected (hit rate 0.479, p = 0.89). Extended to 3-4 hour windows the pooled -0.74 correlation decomposes into a day dummy, not a within-session signal.
 
 - For practical use: the steam ratio is useful for gauging thin-book conditions (monitor each stock against its own trailing hourly median); the cap-share ratio is not a predictor at this sample size.
-
-![Cap-share weight by hour](figs/fig_capshare_by_hour.png)
-![Cap-share deviation from Thursday reference](figs/fig_capshare_deviation.png)
-![Cap-share deviation vs next-hour return (pre-registered)](figs/fig_capshare_predict.png)
-![Hourly steam ratio by stock and day](figs/fig_hourly_ratio.png)
-![Friday vs Monday hourly stability, log-log](figs/fig_fri_mon_scatter.png)
-![Hour-t flow imbalance vs next-hour outcomes](figs/fig_predict.png)
 
 ## Data and method
 
@@ -34,7 +27,7 @@ Source: Yahoo Finance v8 chart endpoint. Friday 1-minute bars for AVGO, GOOG, ME
 
 Hourly windows: seven per day, labeled by their open time (09:30, 10:30, 11:30, 12:30, 13:30, 14:30, 15:30 ET). The 09:30 window covers 60 minutes; the 15:30 window covers 30 minutes including the closing auction.
 
-v3 adds `scripts/11_capshare_ratio.R` (cap-share analysis, three new figures). cori.charts used for new figures (github::ruralinnovation/cori.charts@46cc5b7, theme falls back to ggplot2 approximation if unavailable). v2 scripts (`scripts/10_hourly_ratio.R` and 03/05/06/07) are unchanged.
+v3 adds `R/11_capshare_ratio.R` (cap-share tables and AR(1)) and `R/12_capshare_corrections.R` (the predictive tests as reported below, a null simulation, and the charts). Charts use cori.charts (github::ruralinnovation/cori.charts@46cc5b7, `theme_cori()`). v2 scripts (`R/10_hourly_ratio.R` and 03/05/06/07) are unchanged.
 
 ## Reconciling the conflicting anchors
 
@@ -106,9 +99,15 @@ GOOG (221%), NVDA (193%), META (104%) more than reversed Friday's drop; SNAP ret
 
 ## Cap-share ratio: does the equilibrium modulate at hourly resolution?
 
-### Pre-registration (stated before Monday results were computed)
+### Pre-registration, and what went wrong with its first execution
 
-The test was pre-registered in `scripts/11_capshare_ratio.R` before that script ran against Monday data (see the script header for the full statement). Claim: cap-share deviations from Thursday's reference mean-revert within sessions and predict future returns. Metric: Spearman rho. OOS direction: Fri-fit then Mon-test, and reverse. Decision rule: "usable signal" requires OOS rho to have the same sign as the in-sample rho _and_ absolute OOS rho greater than 0.3. With 7 hourly windows per stock-day and 4 stocks, all results are stated with intervals; no point claims.
+The test was written into the header of `R/11_capshare_ratio.R` before that script was run on Monday data. Claim: cap-share deviations from Thursday's reference mean-revert within sessions and predict future returns. Metric: Spearman rho. Decision rule: usable only if the held-out rho keeps its sign across days and exceeds 0.3 in absolute value. With 7 hourly windows per stock-day and 4 stocks, results are given with intervals.
+
+Three execution errors in the first v3 pass were corrected in `R/12_capshare_corrections.R`:
+
+- "Out-of-sample" in the first pass was each day's own in-sample rank correlation. The corrected test fits a slope on one day and scores it on the other, in both directions.
+- Pooling the four stocks mixed stock identity with timing. 99.6% of the raw deviation variance is between stock-days (AVGO below its Thursday weight and GOOG above, all two days), so the raw pooled rho (0.01) measured which stock is which. Drift is now measured from each day's first window, and returns are taken relative to the four-stock mean at the same hour.
+- A first fix that demeaned each day by its full-day mean used information from later in the day. Simulated with no predictability at all, it produces a mean rho of -0.42, as large as the apparent signal it first showed. The first-window baseline avoids this; its simulated mean under noise is -0.05.
 
 ### What the cap-share ratio is
 
@@ -125,49 +124,47 @@ Cap-share weight_i = (shares_i x price_i) / sum(shares_j x price_j). It moves wh
 
 Deviations are small relative to the 4-5 percentage-point trigger: the drift-band strategy had no trigger to fire (confirmed in companion document, max drift Thu-Mon 2.24pp). AVGO's cap-share stayed below its Thursday reference for all 14 hourly windows across both sessions, deepening on Monday. GOOG's stayed above and was slowly drawn down over the two-day span. SNAP's deviations are under 0.01pp.
 
-### AR(1) coefficients and half-life estimates
+### AR(1): do deviations return toward the Thursday reference?
 
-AR(1) model: lag-1 relationship of deviations from Thursday's reference, hour by hour within each session. With 6 lag-pairs per stock-day, the estimates are illustrative not definitive. All 95% confidence intervals are shown.
+Two readings of "mean-reverting" are separated. Fitting with an intercept asks whether deviations return to the stock's own session level; fitting through the origin asks whether they return to the Thursday reference, which is the question the strategy depends on. With 7 windows there are 6 lag pairs per stock-day, so intervals use the t distribution (4 and 5 degrees of freedom), not 1.96.
 
-| Stock | Day | AR(1) coef | 95% CI | Half-life (hours) | R-squared |
-|---|---:|---:|---:|---:|---:|
-| AVGO | Fri | 0.19 | [-0.27, 0.65] | 0.4 | 0.14 |
-| AVGO | Mon | 0.22 | [-0.55, 0.99] | 0.5 | 0.08 |
-| GOOG | Fri | 0.34 | [-0.75, 1.42] | 0.6 | 0.09 |
-| GOOG | Mon | 0.90 | [-0.16, 1.96] | 6.5 | 0.41 |
-| META | Fri | 0.57 | [-0.09, 1.23] | 1.2 | 0.42 |
-| META | Mon | 0.61 | [+0.29, 0.92] | 1.4 | 0.78 |
-| SNAP | Fri | 0.24 | [-0.08, 0.56] | 0.5 | 0.35 |
-| SNAP | Mon | 0.25 | [-0.53, 1.04] | 0.5 | 0.09 |
+| Stock | Day | Own-mean AR(1) | 95% CI | Toward-reference AR(1) | 95% CI | Half-life toward reference (hours) |
+|---|---|---:|---:|---:|---:|---:|
+| AVGO | Fri | 0.19 | [-0.46, 0.84] | 1.02 | [0.92, 1.12] | none (at or above 1) |
+| AVGO | Mon | 0.22 | [-0.87, 1.32] | 1.00 | [0.95, 1.06] | none |
+| GOOG | Fri | 0.34 | [-1.20, 1.88] | 0.99 | [0.92, 1.07] | 115 |
+| GOOG | Mon | 0.90 | [-0.61, 2.41] | 0.99 | [0.95, 1.03] | 65 |
+| META | Fri | 0.57 | [-0.36, 1.50] | 0.68 | [0.34, 1.03] | 1.8 |
+| META | Mon | 0.61 | [0.16, 1.05] | 1.08 | [0.78, 1.39] | none |
+| SNAP | Fri | 0.24 | [-0.21, 0.69] | 1.07 | [0.68, 1.46] | none |
+| SNAP | Mon | 0.25 | [-0.86, 1.36] | 0.94 | [0.79, 1.09] | 12 |
 
-Every 95% CI except META Monday includes both zero (no autocorrelation) and one (random walk). META Monday is the clearest case: coef 0.61, CI 0.29 to 0.92, half-life about 1.4 hours. The deviations are persistent more than mean-reverting. This is consistent with Friday being a partial permanent repricing of AVGO relative to the basket.
+Toward the Thursday reference, seven of eight coefficients have intervals containing 1 (a random walk) and the point estimates run 0.94 to 1.08. The exception is META on Friday (0.68, half-life about 1.8 hours, interval 0.34 to 1.03), the one stock whose weight sat on the reference. Around its own session level, the hourly wobble in cap share is short-lived (point estimates 0.19 to 0.90, mostly below 0.6), but those wobbles are a few hundredths of a percentage point and are not evidence of a pull toward the Thursday weights. AVGO's and GOOG's offsets from the reference did not decay on either day. The earlier statement that "every interval includes both zero and one" was wrong; it is replaced by this table.
 
-### Predictability: pre-registered test results
+![AVGO and GOOG sat off their Thursday weights both days](figs/fig_capshare_deviation.png)
 
-| Window | In-sample Friday | In-sample Monday | OOS verdict |
-|---|---:|---:|---:|
-| Next 1h | Fri rho = -0.22 (n=24) | Mon rho = -0.18 (n=24) | Signs match; \|rho\| < 0.3: not usable |
-| Next 3h | Fri rho = -0.35 (n=16) | Mon rho = -0.15 (n=16) | Signs match; \|rho\| < 0.3: not usable |
+_Deviation from the Thursday-close cap share, percentage points; solid Friday, dashed Monday. The offsets are persistent and larger than any hourly movement around them._
 
-The sign is consistently negative (larger-than-reference cap-share in hour t associates with weaker next-hour return), and signs match between days. But magnitudes are small and per-stock results flip: GOOG Monday rho = +0.66, opposite to GOOG Friday rho = -0.49; SNAP Friday rho = -1.00 (perfect anti-correlation with 6 windows, artifact not signal). The pre-registered decision rule is not met.
+### Predictability: corrected results
 
-The answer, stated plainly: no usable predictive stability in the cap-share ratio at two-day, hourly resolution. The correct use of cap-share weights in this strategy is as rebalancing targets, not signals. The strategy does not need them to predict; it uses them to decide when a drift is large enough to trade back toward the target.
+Drift is the change in a stock's cap-share weight since the day's first window; the outcome is the next-hour (or next-three-hour) return minus the four-stock mean at the same hour. A slope is fit on one day and scored on the other. The "noise band" is the 5th to 95th percentile of the held-out-style rho when 28 hourly returns are independent random draws with no predictability.
 
-![Cap-share weight by hour](figs/fig_capshare_by_hour.png)
+| Window | Fit on | Test on | Held-out rho | OOS R-squared vs zero forecast | Hours per day | Noise band (5th to 95th) |
+|---|---|---|---:|---:|---:|---|
+| Next 1h | Fri | Mon | -0.15 | 0.006 | 5 | -0.42 to +0.36 |
+| Next 1h | Mon | Fri | -0.08 | 0.006 | 5 | -0.42 to +0.36 |
+| Next 3h | Fri | Mon | -0.50 | 0.12 | 3 | -0.68 to +0.58 |
+| Next 3h | Mon | Fri | -0.38 | 0.20 | 3 | -0.68 to +0.58 |
 
-_Cap-share weight by hour for each stock, Friday (red) and Monday (blue). The dashed line is the Thursday-close reference weight. AVGO fell below its reference on Friday and deepened on Monday; GOOG rose above and converged slowly; META and SNAP barely moved._
+At one hour, the held-out rho is -0.15 and -0.08, below the 0.3 threshold, and the forecast explains 0.6% of next-hour variance. At three hours the rho is -0.50 and -0.38, same sign both ways and above 0.3, so the pre-registered rule as written is met at three hours. It should not be read as a finding. Each day contributes three independent hours (the four stocks share them), and pure noise produces an absolute rho of 0.38 or more in 38% of simulated draws and 0.50 or more in 23%. A threshold of 0.3 sits well inside the noise band at this sample size, so the rule was too weak to be a test; the bootstrap intervals for the 3-hour rho, resampling hours, run from -0.80 to +0.60 on Friday and -0.80 to +0.40 on Monday. The answer stated plainly: no usable predictive stability in the cap-share ratio at two-day, hourly resolution. The sign is negative in all four cases, which is the direction a rebalancer would want, and two days cannot say more. The correct use of cap-share weights in this strategy is as rebalancing targets, not signals.
 
-![Cap-share deviation from Thursday-close reference](figs/fig_capshare_deviation.png)
+![Share drift did not predict the next hour](figs/fig_capshare_within.png)
 
-_Deviation from the Thursday-close reference weight (percentage points). Zero is the Thursday reference. AVGO shows a persistent negative deviation across both sessions; GOOG a positive one. These deviations are within the basket, not absolute price movements._
-
-![Cap-share deviation vs next-hour return (pre-registered)](figs/fig_capshare_predict.png)
-
-_Pre-registered test: cap-share deviation in hour t vs next-hour close-to-close return. Friday and Monday are colored separately. The pattern shows weak negative association, below the pre-registered usable threshold, with per-stock signs that flip between days._
+_Cap-share drift since the day's first window against the next-hour return relative to the basket, one point per stock-hour. The cloud has no visible slope._
 
 ## Steam ratio: hourly stability and predictability
 
-This section reproduces v2's findings and adds the 3-4 hour window extension. All in `scripts/10_hourly_ratio.R` (steam ratio, four figures from v2) and `scripts/11_capshare_ratio.R` (3-4h window tables, v3).
+This section reproduces v2's findings and adds the 3-4 hour window extension. All in `R/10_hourly_ratio.R` (steam ratio, four figures from v2) and `R/11_capshare_ratio.R` (3-4h window tables, v3).
 
 ### Finding 1: the amplification is per-stock structure; its intra-day profile repeats
 
@@ -180,6 +177,10 @@ This section reproduces v2's findings and adds the 3-4 hour window extension. Al
 
 The hourly ratio profiles track each other across two sessions with opposite moods for AVGO (0.93) and GOOG (0.86). Within any single hour the minute-level ratio has a coefficient of variation of 0.76 to 1.08; stability exists only at hourly aggregation. Event-conditioned medians (top-quartile moves) run 2.4x to 2.8x the hour's baseline on both days.
 
+![Hourly steam ratio by stock and day](figs/fig_hourly_ratio.png)
+
+_Steam ratio (median of 1-minute ratios) per hour, per stock, Friday and Monday. The shape of the intra-day profile repeats with high rank-correlation for AVGO and GOOG despite the two sessions having opposite outcomes._
+
 ### Finding 2: what changed was the flow, not the vessel
 
 Monday ran roughly 2x Friday's dollar volume with the multipliers essentially unchanged (within 10% for AVGO, META, SNAP; GOOG 25% lower on its calmer session). The larger session capitalization changes were produced by more flow through the same amplifier. In the steam framing: the vessel's amplification is a constant of how the market is plumbed; a crisis changes how hard the steam pushes, not the size of the piston.
@@ -190,6 +191,10 @@ Signed volume imbalance per hour as a Spearman predictor of next-hour return, po
 
 - Pooled directional hit rate: 0.479 (binomial p = 0.89 against coin-flip).
 - Per-symbol Spearman(imb, next_ret): AVGO +0.09, GOOG -0.37, META -0.02, SNAP -0.58 — mixed signs at 12 windows per symbol.
+
+![Hour-t flow imbalance vs next-hour return and magnitude](figs/fig_predict.png)
+
+_Steam-ratio directional test: signed volume imbalance in hour t vs next-hour return. No trend; coin-flip hit rate (p = 0.89)._
 
 ### Finding 4: 3-4 hour window extension
 
@@ -204,18 +209,6 @@ The pooled -0.74 looks like a signal and is not. Within each day the correlation
 ### Design consequence for the trading harness
 
 The expansion-ratio monitor should baseline each stock against its own trailing hourly median, not against another stock or a crisis day. That monitor requires a 20-plus session panel of hourly ratios to establish baselines; this two-session analysis confirms the structural property but cannot supply the baselines.
-
-![Hourly steam ratio by stock and day](figs/fig_hourly_ratio.png)
-
-_Steam ratio (median of 1-minute ratios) per hour, per stock, Friday and Monday. The shape of the intra-day profile repeats with high rank-correlation for AVGO and GOOG despite the two sessions having opposite outcomes._
-
-![Friday vs Monday hourly stability, log-log](figs/fig_fri_mon_scatter.png)
-
-_Per-stock, per-hour scatter of Friday median ratio (x) vs Monday median ratio (y), log-log scale. Points near the 45-degree line mean the ratio is stable. AVGO and GOOG are close; META and SNAP have more scatter._
-
-![Hour-t flow imbalance vs next-hour return and magnitude](figs/fig_predict.png)
-
-_Pre-registered steam-ratio directional test: signed volume imbalance in hour t vs next-hour return. No trend; coin-flip hit rate (p = 0.89)._
 
 ## What Monday did not repair
 
@@ -254,9 +247,9 @@ The 1-minute volumes do not reconcile with Yahoo's daily volumes. The ratio of s
 
 ## Reproducibility
 
-- v2 scripts (unchanged): `scripts/10_hourly_ratio.R`, `scripts/03_analysis.R`, `scripts/05_tables_doc1.R`, `scripts/06_extras_doc1.R`, `scripts/07_sums_doc1.R`.
-- v3 additions: `scripts/11_capshare_ratio.R` (cap-share ratio, AR(1), three new figures in `docs/figs/`).
+- v2 scripts (unchanged): `R/10_hourly_ratio.R`, `R/03_analysis.R`, `R/05_tables_doc1.R`, `R/06_extras_doc1.R`, `R/07_sums_doc1.R`.
+- v3 additions: `R/11_capshare_ratio.R` (cap-share tables, first-pass AR(1) and predictive tests, superseded where noted) and `R/12_capshare_corrections.R` (corrected AR(1), true out-of-sample tests, null simulation, charts).
 - Raw data: `data/*_20261123_1m.json`, `data/NVDA_20261120_1m.json`, `data/*_daily_*.json`, `AVGO.json`, `GOOG.json`, `META.json`, `SNAP.json`.
-- Computed outputs: `data/capshareratio_hourly.csv`, `data/capshareratio_ar1.csv`, `data/capshareratio_predict.csv`, `data/hourly_ratio.csv`, `data/hourly_stability.csv`, `data/hour_to_hour_predict.csv`, `data/hour3_predict.csv`.
+- Computed outputs: `data/capshareratio_hourly.csv`, `data/capshareratio_ar1_v3fix.csv`, `data/capshareratio_oos_true.csv`, `data/capshareratio_within_tests.csv`, `data/capshareratio_predict.csv`, `data/hourly_ratio.csv`, `data/hourly_stability.csv`, `data/hour_to_hour_predict.csv`, `data/hour3_predict.csv`.
 - v3 is `docs/selloff-nov20-recovery-nov23-v3.qmd`; v2 (`-v2.qmd`) and v1 (`.qmd`) are preserved.
 - Educational analysis of publicly reported prices. Not investment advice.
